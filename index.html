@@ -87,6 +87,7 @@
 
 											<li><a href="#BusinessHours">Business Hours</a></li>
 											<li><a href="#Branch_setting">Branch Setting</a></li>
+											<li><a href="#Email_setting">Email Setting</a></li>
 										</ul>
 									</li>
 									<li>Inventory
@@ -115,6 +116,7 @@
 										</ul>
 									</li>
 									<li><a href="#Service">Service</a></li>
+									<li><a href="#Quotation">Quotation</a></li>
 									<li><a href="#Invoice">Invoice</a></li>
 									<li>Job Card
 										<ul style="display:block;">
@@ -131,14 +133,13 @@
 											<li><a href="#Expenses">Expenses</a></li>
 										</ul>
 									</li>
-									<li><a href="#Sales">Sales</a></li>
+									<li><a href="#Sales">Sells</a></li>
 									<li><a href="#ComplianceManagement">Compliance Management</a></li>
 
 									<li><a href="#Report">Report</a></li>
 									<li><a href="#EmailTemplate">Email Template</a></li>
 									<li><a href="#CustomField">Custom Field</a></li>
 									<li><a href="#ObservationLibrary">Observation Library</a></li>
-									<li><a href="#Quotation">Quotation</a></li>
 									<li><a href="#Branch">Branch</a></li>
 								</ul>
 							</li>
@@ -164,6 +165,7 @@
 									</li>
 									<li><a href="#C_Vehicles">Vehicle</a></li>
 									<li><a href="#C_Service">Service</a></li>
+									<li><a href="#C_Quotation">Quotation</a></li>
 									<li><a href="#C_Invoice">Invoice</a></li>
 									<li>Job Card
 										<ul style="display:block;">
@@ -172,7 +174,7 @@
 										</ul>
 									</li>
 									<li><a href="#C_Sales">Purchase</a></li>
-									<li><a href="#C_Quotation">Quotation</a></li>
+
 								</ul>
 							</li>
 							<!-- employee view -->
@@ -212,6 +214,7 @@
 									</li>
 
 									<li><a href="#E_Service">Service</a></li>
+									<li><a href="#E_Quotation">Quotation</a></li>
 									<li><a href="#E_Invoice">Invoice</a></li>
 									<li>Job Card
 										<ul style="display:block;">
@@ -219,8 +222,8 @@
 											<li><a href="#E_Gatepass">Gate Pass</a></li>
 										</ul>
 									</li>
-									<li><a href="#E_Sales">Sales</a></li>
-									<li><a href="#E_Quotation">Quotation</a></li>
+									<li><a href="#E_Sales">Sells</a></li>
+
 								</ul>
 							</li>
 							<!-- Support Staff view --->
@@ -259,6 +262,7 @@
 										</ul>
 									</li>
 									<li><a href="#S_Service">Service</a></li>
+									<li><a href="#S_Quotation">Quotation</a></li>
 									<li><a href="#S_Invoice">Invoice</a></li>
 									<li>Job Card
 										<ul style="display:block;">
@@ -275,13 +279,13 @@
 											<li><a href="#S_Expenses">Expenses</a></li>
 										</ul>
 									</li>
-									<li><a href="#S_Sales">Sales</a></li>
+									<li><a href="#S_Sales">Sells</a></li>
 									<li><a href="#S_ComplianceManagement">Compliance Management</a></li>
 
 									<li><a href="#S_Report">Report</a></li>
 									<li><a href="#S_CustomField">Custom Field</a></li>
 									<li><a href="#S_ObservationLibrary">Observation Library</a></li>
-									<li><a href="#S_Quotation">Quotation</a></li>
+
 
 								</ul>
 							</li>
@@ -337,7 +341,7 @@
 											<li><a href="#A_Expenses">Expenses</a></li>
 										</ul>
 									</li>
-									<li><a href="#A_Sales">Sales</a></li>
+									<li><a href="#A_Sales">Sells</a></li>
 									<li><a href="#A_ComplianceManagement">Compliance Management</a></li>
 
 									<li><a href="#A_Report">Report</a></li>
@@ -346,6 +350,7 @@
 
 								</ul>
 							</li>
+							<li><a href="#Patch">Patch</a></li>
 							<li><a href="#FAQ">FAQ</a></li>
 						</ul>
 					</aside>
@@ -353,18 +358,18 @@
 
 				<div class="col-md-8 col-sm-8 col-xs-12">
 					<div id="header" class="row">
-						<div class="col-md-4 col-sm-4 col-xs-12 logo" style="background-color:#2a3f54;"> <a
-								href="index.html"><img src="images/logo.png" width="230px" height="70px" alt="logo"></a>
+						<div class="col-md-4 col-sm-4 col-xs-12 logo"> <a href="index.html"><img src="images/logo.png"
+									width="230px" height="70px" alt="logo"></a>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 desc">
 							<h4 class="slight">Garage Management System </h4>
-							<h5 class="slight"><small> Documented by Mojoomla</a> - at 16-05-2018</small></h5>
+							<h5 class="slight"><small> Documented by Mojoomla</a> - at 06-01-2024</small></h5>
 						</div>
 					</div>
 
 					<section id="Introduction">
 						<hr class="vertical-space2">
-						<p align="center"><img src="images/final_1.jpg"></p>
+						<p align="center"><img src="images/final_1.jpg" style="width: -webkit-fill-available;"></p>
 						<h3><strong>A) Introduction</strong></h3>
 						<p>
 							Garage Management System for Laravel the ideal way to manage complete Garage Management
@@ -429,8 +434,25 @@
 											<section>
 												<h3><strong>B) Installation:</strong></h3><br>
 
-												<h4>1)Database setup</h4><br />
+												<h4>1)Purchase Information</h4><br />
 												<img src="images/Installer/Installer1.png" /><br><br>
+
+												<ol>
+													<li><strong>Servername : </strong>Enter your servername name. </li>
+													<li><strong>Purchase Key : </strong>Enter your purchase key.</li>
+													<li><strong>E-mail : </strong>Enter your purchasekey time email.
+													</li>
+												</ol>
+
+												<h4>2)Requirements</h4><br />
+												<img src="images/Installer/Installer2.png" /><br><br>
+
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is fail
+												then you are not able to install this package. check all requirements
+												and click on Next Step.<br><br>
+
+												<h4>3)Database setup</h4><br />
+												<img src="images/Installer/Installer3.png" /><br><br>
 
 												<ol>
 													<li><strong>Database Name : </strong>Enter your database name same
@@ -450,8 +472,8 @@
 												All privileges to give the database user can access the database use in
 												control panel.</span><br><br>
 
-												<h4>2)System Setting</h4><br />
-												<img src="images/Installer/Installer2.png" /><br><br>
+												<h4>4)System Setting</h4><br />
+												<img src="images/Installer/Installer4.png" /><br><br>
 
 												<ol>
 													<li><strong>System Name :</strong>Enter a new system name.</li>
@@ -461,8 +483,8 @@
 													<li><strong>Last Name :</strong>Enter a new last name.</li>
 												</ol><br><br>
 
-												<h4>3)Login Details</h4><br />
-												<img src="images/Installer/Installer3.png" /><br><br>
+												<h4>5)Login Details</h4><br />
+												<img src="images/Installer/Installer5.png" /><br><br>
 												<ol>
 													<li><strong>Username :</strong>Enter a new admin username.</li>
 													<li><strong>Password :</strong>Enter a new admin password.</li>
@@ -470,8 +492,8 @@
 														password.</li>
 												</ol><br><br>
 
-												<h4>4)Finish</h4><br />
-												<img src="images/Installer/Installer4.png" /><br><br>
+												<h4>6)Finish</h4><br />
+												<img src="images/Installer/Installer6.png" /><br><br>
 												<ul>
 													<li>Read the notes and click on install now.</li><br /><br />
 												</ul>
@@ -487,7 +509,8 @@
 												<h3><strong>C) CronJobs</strong></h3><br>
 												<p>You need to set below command as cronjob
 												</p>
-												<p><strong>php artisan schedule:run (runs from the root folder of garage app)</strong>
+												<p><strong>php artisan schedule:run (runs from the root folder of garage
+														app)</strong>
 												</p>
 												<p>Example of cronjob command set in cPanel:</p>
 												<p><strong>* * * * * php /path/to/garage/artisan schedule:run >>
@@ -607,10 +630,12 @@
 
 												<section id="AccessRight">
 													<h5>C) Access Right Settings</h5><br />
-													<p>Click on <strong>Setting</strong> inside Click on <strong>Access
-															Right Setting</strong> to start setting up the system.
+													<p>Click on <strong>Setting</strong> inside. Click on <strong>
+															Access Right Setting </strong> to start setting up the
+														system.
 														Access rights is a functionality for all users like Customer,
-														Support Staff, Employee and Accountant to give access rights for
+														Support Staff, Employee, Accountant and Branch Admin to give
+														access rights for
 														use modules of this system. Here all modules like Inventory,
 														Users, Vehicles, Service etc. in this modules which module with
 														access to add, edit, view and delete access right for all users.
@@ -627,11 +652,13 @@
 														src="images/Admin/Accessrights_for_supportstaff_assigned_by_Admin.png">
 													<img alt="Access Right For Accountant"
 														src="images/Admin/Accessrights_for_accountants_assigned_by_Admin.png">
+													<img alt="Access Right For Branch Admin"
+														src="images/Admin/Accessrights_for_branchadmin_assigned_by_Admin.png">
 													<br><br>
 													<ul>
 														<h6>Access Right Settings</h6>
 														<li><strong>Accordion with user name:</strong> Customer,
-															Employee, Support Staff and Accountant.</li>
+															Employee, Support Staff, Accountant and Branch Admin.</li>
 														<li><strong>Module Name:</strong> Modules like Vehicle,
 															Supplier, Product, Service etc. This all module have data
 															and this data with make operations like, Add, Edit, Delete,
@@ -685,68 +712,84 @@
 													<h5>E) Branch Settings</h5><br />
 													<p>Click on <strong>Setting</strong> inside Click on <strong>Branch
 															Setting</strong> tab to start setting up the system. You are
-														advised to Admin can update it's current branch from here
-														<strong>Branch Setting</strong> tab, select Branch name and
-														click on update button after it Admin can move on selected
-														Branch. All the details and data also like Support Staff,
-														Employee, Service, Quotation, Invoice and Reports all the
-														modules data show on this system is only current branch, which
-														is selected by Admin.
+														advised that Admin can update it's current branch from its
+														<strong>Branch Setting</strong> tab, select the branch name and
+														click on the update button, after that Admin can move to another
+														branch.
+														All the details and data also, like Support Staff, Employee,
+														Service, Quotation, Invoice and Reports. All the module data
+														shown on this system is only the current branch, which is
+														selected by the Admin.
 													</p>
 
 													<ul>
 														<h6>Basic Steps For Use Of Branch Feature:</h6>
-														<li><strong>1)</strong> Firstly install successfuly fresh Garage
-															Package, after that <strong>Branch Module</strong> have not
-															show any data of branch because this is a <strong>Main
-																Branch</strong>, so this branch name and details are not
-															show on <strong>Branch Module</strong>. If you need to show
-															<strong>Main Branch</strong> details then you can go on
-															<strong>Settings</strong> and click on <strong>General
-																Setting</strong> tab.
+														<li><strong>1)</strong> Firstly, install successfully a fresh
+															Garage Package.
+															After that, <strong>Branch Module</strong> does not show any
+															branch data
+															because this is a <strong>main branch</strong>, so the
+															branch name and details are
+															not shown on <strong>Branch Module</strong>. If you need to
+															show the
+															<strong>Main Branch</strong> details, then you can go to
+															<strong>Settings</strong> and click on the<strong> General
+																Setting </strong> tab.
 														</li>
 
-														<li><strong>2)</strong> If Admin need to create another branch
-															at that time Admin go to <strong>Branch Module</strong> and
-															click on add branch and fill all required data and submit
-															it. Now successfuly create branch then Admin can see details
-															of this branch on <strong>Branch Module</strong> listing
-															page, also Admin can add, edit, view and delete this branch
-															from <strong>Branch Module</strong>.</li>
+
+														<li><strong>2)</strong> If Admin needs to create another branch
+															at that time,
+															Admin goes to <strong>Branch Module</strong> and
+															clicks on add branch and fills in all required data and
+															submits
+															it. Now we have successfully created a branch, then Admin
+															can see details
+															of this branch on the <strong>Branch Module</strong> listing
+															page. Also, Admin can add, edit, view and delete this branch
+															from the <strong>Branch Module</strong>.</li>
 
 														<li><strong>3)</strong> Now inside <strong>Branch
-																Module</strong> have show one branch entry, so inside
+																Module</strong>, we have shown one branch entry, so
+															inside
 															<strong>Branch Setting Tab</strong> Admin can show two
-															branch name on Branch Select Box like (Main Branch and New
+															branch names on Branch Select Box like (Main Branch and New
 															branch name).
 														</li>
 
-														<li><strong>4)</strong> Now on <strong>Branch Setting
-																Tab</strong> Admin can select branch name and update
-															branch so Admin is currently active for this particular
-															selected branch. So now Admin show, add, edit, view and
-															delete data of this current branch, which is selected by
+														<li><strong>4)</strong> Now on <strong>Branch Setting Tab
+															</strong>, Admin can select names and update
+															branches, so Admin is currently active for this particular
+															selected branch. So, now Admin shows, adds, edits, views and
+															deletes data from this current branch, which is selected by
 															Admin.</li>
 
-														<li><strong>5)</strong> Admin is on Current active branch at a
-															time add one Support Staff, so this Supports Staff is
-															belongs to only for this branch not for any other branch.
+														<li><strong>5)</strong> Admin is on the current active branch at
+															a
+															time. Add one Support Staff, so this Support Staff
+															belongs only to this branch, not to any other branch.
 															This Support Staff is able to do or perform any kind of
-															action for only his/her branch based on give permissions by
+															action for only his/her branch based on being given
+															permission by
 															Admin.</li>
 
 														<li><strong>6)</strong> All roles and data added by Admin is for
-															Admin current selected branch. But in Customer and Supllier
-															case both are common for all the branch, this both role have
-															not any single branch. This is common for all branch. And
-															for customer side any customer login on Garage System at a
-															time customer can show all the details of his/her all branch
+															Admin's current selected branch. But the customer and the
+															supplier
+															cases are both common for all the branches. Both these roles
+															don't have
+															a single branch. This is common for all branches. And
+															on the customer side, any customer logs into Garage System
+															at a
+															time, the customer can show all the details of all his or
+															her branch
 															data like sale, service, quotation and other data.</li>
 
 														<li><strong>7)</strong> Admin or Support Staff add any kind of
-															data from any modules at that time he/she shown one field of
-															selected branch name, to just confirm this data is add for
-															this selected branch, because this person is for add data is
+															data from any
+															module the time he/she is shown one field of the selected
+															branch name, to just confirm this data is added to this
+															selected branch, because this person is for add data is
 															it currently/active on this particular branch and add this
 															data for this particular branch.</li>
 													</ul>
@@ -761,13 +804,19 @@
 													</ul><br />
 
 													<h6>Admin Currently Selected Branch is Main Branch:</h6>
-													<p>Here you can see <strong>Admin</strong> has currently selected
-														branch is <strong>Main Branch</strong> and now in next image you
-														can see <strong>Support Staff</strong> list of only <strong>Main
-															Branch</strong> have registered Support Staff only. And also
-														third image you can see <strong>Gujarat University Road
-															Branch</strong> branch have registered Support Staff only.
+													<p>Here you can see the <strong>Admin</strong>. The currently
+														selected
+														branch is <strong>Main Branch</strong> and now in the next image
+														you
+														can see the <strong>Support Staff</strong> list of only
+														<strong>Main
+															Branch</strong> have registered Support Staff only. And
+														also,
+														the third image you can see in the <strong>Gujarat University
+															Road
+															Branch</strong> branch has registered Support Staff only.
 													</p><br />
+
 													<img alt="Branch Settings Tab"
 														src="images/Admin/branch_setting.png">
 													<br><br>
@@ -796,14 +845,46 @@
 														src="images/Admin/branch_setting_gujarat_university_branch_supportstaff.png">
 													<br><br>
 
-													<p>Now you can see difference of both selected branch. Main Branch
-														have one another Support Staff and Gujarat University Road
-														Branch have one another Support Staff. Both Support Staff not
-														shown inside one branch. So this is the feature of
+													<p>Now you can see the difference between both selected branches.
+														The main branch has one other Support Staff and Gujarat
+														University
+														Road Branch has one other Support Staff. Both Support Staff are
+														not shown inside one branch. So this is a feature of the
 														<strong>Branch Module</strong>.
 													</p>
 													<br><br>
 
+												</section>
+
+												<!--  BusinessHours Settings  -->
+												<section id="Email_setting">
+													<h5>F) Email Settings</h5><br />
+													<p>Click on <strong>Setting</strong> within <strong>Email Setting
+														</strong> to start setting up the system. To configure your
+														email settings, be sure to fill out all fields. These details
+														are
+														required to configure and send an
+														email. So, the admin can configure email settings.
+													</p>
+													<br />
+													<img alt="Business Hours Settings"
+														src="images/Admin/EmailSetting.png">
+													<br>
+													<br>
+													<ul>
+														<li><strong>Email Driver:</strong> Specify the email driver. Use
+															smtp for SMTP protocol.</li>
+														<li><strong>SMTP Server:</strong> Enter the SMTP server address.
+															Example: smtp.gmail.com.</li>
+														<li><strong>SMTP Port:</strong> Specify the SMTP port number.
+															Example: 465 for SSL.</li>
+														<li><strong>Email Address:</strong> Enter your full email
+															address.</li>
+														<li><strong>Password:</strong> Provide your email account
+															password. Keep it confidential.</li>
+														<li><strong>Encryption:</strong> Choose the encryption method:
+															ssl for SSL/TLS, or null for no encryption.</li>
+													</ul><br /><br />
 												</section>
 											</section>
 
@@ -1045,6 +1126,11 @@
 													<p><strong>View Stock:</strong> Admin can view the particular stock
 														details.</p><br />
 													<img alt="Stock" src="images/Admin/Stoke_view.png"><br><br>
+													<br>
+
+													<p><strong>Manage Stock:</strong> Admin can manage the quantity of a
+														particular stock.</p><br />
+													<img alt="Stock" src="images/Admin/Stock_manage.png"><br><br>
 													<br>
 												</section>
 											</section>
@@ -1696,6 +1782,35 @@
 												</section>
 											</section>
 
+											<!-- Quotation Start  -->
+											<section id="Quotation">
+												<h4><strong>16)Quotation</strong></h3><br />
+													<h5>Quotation </h5><br />
+													<p><strong>Quotation List:</strong> Admin can add new Quotation, and
+														view a complete list of all Quotations and process them.</p>
+													<br />
+													<img alt="Quotation list"
+														src="images/Admin/quotation_list.png"><br><br>
+													<p><strong>Add Quotation:</strong> Admin can add Quotation</p><br />
+													<img alt="Quotation add"
+														src="images/Admin/quotation_add.png"><br><br>
+
+													<p><strong>Add Items In Quotation:</strong> The Admin can add
+														quotation
+														items to the quotation details and then he can make the
+														quotation
+														final by checking the final process checkbox. And once a
+														quotation
+														is finally submitted, that quotation comes on the jobcard list
+														for
+														the further process.</p><br />
+
+
+													<img alt="Quotation add"
+														src="images/Admin/quotation_add_process.png"><br><br>
+											</section>
+											<!-- Quotation End  -->
+
 											<!-- Invoice   -->
 											<section id="Invoice">
 												<h4><strong>7)Invoice</strong></h3><br />
@@ -1705,6 +1820,13 @@
 														invoice all invoice and view a complete list of all invoice.</p>
 													<br />
 													<img alt="invoice List" src="images/Admin/Invoice_list.png"><br><br>
+													<p><strong>Sold Part Invoice List:</strong> Admin can add a new sold
+														part invoice,
+														edit sold part invoice and view a complete list of all sold part
+														invoice.</p>
+													<br />
+													<img alt="invoice List"
+														src="images/Admin/Sold_Part_Invoice_list.png"><br><br>
 													<p><strong>Add Invoice:</strong> Admin can add invoice details</p>
 													<br />
 													<img alt="invoice add" src="images/Admin/Invoice_add.png"><br><br>
@@ -1715,13 +1837,13 @@
 															generated.</li>
 														<li><strong>Customer Name</strong>: Select customer name for
 															this invoice.</li>
-														<h6>invoice type for service </h6>
+														<!-- <h6>invoice type for service </h6> -->
 														<li><strong>Job card Number</strong>: Select job card number for
 															this invoice.</li>
 
-														<h6>invoice type for sales </h6>
+														<!-- <h6>invoice type for sales </h6>
 														<li><strong>Select vehicle</strong>: Select vehicle for this
-															invoice.</li>
+															invoice.</li> -->
 
 														<li><strong>Date</strong>: Enter a new date for this invoice.
 														</li>
@@ -1944,13 +2066,13 @@
 																generated.</li>
 															<li><strong>Customer Name</strong>: Select customer name for
 																this invoice.</li>
-															<h6>invoice type for service </h6>
+															<!-- <h6>invoice type for service </h6> -->
 															<li><strong>Job card Number</strong>: Select job card number
 																for this invoice.</li>
 
-															<h6>invoice type for sales </h6>
+															<!-- <h6>invoice type for sales </h6>
 															<li><strong>Select vehicle</strong>: Select vehicle for this
-																invoice.</li>
+																invoice.</li> -->
 
 															<li><strong>Date</strong>: Enter a new date for this
 																invoice.</li>
@@ -2241,44 +2363,54 @@
 
 											<!-- Sales   -->
 											<section id="Sales">
-												<h4><strong>10)Sales</strong></h3><br />
-													<h5>Sales </h5><br />
-													<p><strong>List Sales:</strong> Admin can add new Sales, Sales all
-														Sales and view a complete list of all Sales.</p><br />
-													<img alt="Sales List" src="images/Admin/Sales_list.png"><br><br>
-													<p><strong>Add Sales:</strong> Admin can add Sales details</p><br />
+												<h4><strong>10)Sells</strong></h3><br />
+													<!-- <h5>Sells </h5><br /> -->
+													<!-- <p><strong>Vehicle Sells:</strong> Admin can add new Sells, edit all
+														Sells and view a complete list of all Sells.</p><br />
+													<img alt="Sales List" src="images/Admin/Sales_list.png"><br><br> -->
+													<p><strong>Part Sells:</strong> Admin can add new part Sells, edit
+														all
+														part Sells and view a complete list of all part Sells.</p><br />
+													<img alt="Sales List"
+														src="images/Admin/Part_Sales_list.png"><br><br>
+													<p><strong>Add Sells:</strong> Admin can add Sells details</p><br />
 													<img alt="Sales add" src="images/Admin/Sales_add.png"><br><br>
 													<ul>
 														<li><strong>Bill number</strong>: Bill number auto generated.
 														</li>
-														<li><strong>Status</strong>: Select status for this sales.</li>
+														<!-- <li><strong>Status</strong>: Select status for this sales.</li> -->
 														<li><strong>Customer Name</strong>: Select customer name for
 															this sales.</li>
-														<li><strong>Sales Date</strong>: Enter a new date for this
+														<li><strong>Sales Date</strong>: Enter a new sales date for this
 															sales.</li>
-														<li><strong>Vehicle Brand</strong>: Select vehicle brand for
-															this sales.</li>
+														<!-- <li><strong>Vehicle Brand</strong>: Select vehicle brand for
+															this sales.</li> -->
 														<li><strong>Quantity</strong>: Enter a new quantity for this
 															sales.</li>
-														<li><strong>Select Model</strong>: Select model for this sales.
+														<!-- <li><strong>Select Model</strong>: Select model for this sales.
 														</li>
 														<li><strong>Chassis</strong>: Select model and auto generated
 															chassis.</li>
-														<li><strong>Select PaymentType</strong>: Select payment type for
-															this sales.</li>
-														<li><strong>Price</strong>: Select model and auto generated
+														<li><strong>Select PaymentType</strong>: Select paymenttype for
+															this sales.</li> -->
+														<li><strong>Price</strong>: Select product name and auto
+															generated
 															price.</li>
-														<li><strong>Color</strong>: Select color for this sales.</li>
+														<!-- <li><strong>Color</strong>: Select color for this sales.</li>
 														<li><strong>Add Or Remove</strong>: If the desired color is not
 															available in a list then click on <strong>Add Or
 																Remove</strong> button. You can add new color from here.
 														</li>
-														<img alt="color" src="images/Admin/Sales_add_color.png"><br><br>
-														<li><strong>Total price</strong>: Select model and quantity and
+														<img alt="color"
+															src="images/SupportStaff/Sales_add_color.png"><br><br> -->
+														<li><strong>Total price</strong>: Select product name and
+															quantity and
 															auto generated total price.</li>
 														<li><strong>Salesman</strong>: Select salesman for this sales.
 														</li>
-														<h6>No of Service</h6>
+														<li><strong>Branch</strong>: Select branch for this sales.
+														</li>
+														<!-- <h6>No of Service</h6>
 														<li><strong>Interval</strong>: Select interval for this sales.
 														</li>
 														<li><strong>Date Gap</strong>: Select date gap for this sales.
@@ -2286,11 +2418,12 @@
 														<li><strong>Number of services</strong>: Select number of
 															service for this sales.</li>
 														<li><strong>AssignTo</strong>: Select assignto for this sales.
-														</li>
+														</li> -->
 													</ul>
-													<p><strong>Edit Sales:</strong> Admin can Edit detail of particular
-														Sales by clicking on Edit detail button. This will open up
-														details. From here admin can Change Sales Details.</p><br />
+													<p><strong>Edit Sells:</strong> Admin can Edit detail of
+														particular sells by clicking on Edit detail button. This will
+														open up details. From here Admin can Change sells
+														Details.</p><br />
 													<img alt="Sales edit" src="images/Admin/Sales_edit.png"><br><br>
 													<p><strong>Create Invoice:</strong> Admin can Create invoice details
 													</p><br />
@@ -2302,13 +2435,13 @@
 															generated.</li>
 														<li><strong>Customer Name</strong>: Select customer name for
 															this invoice.</li>
-														<h6>invoice type for service </h6>
+														<!-- <h6>invoice type for service </h6> -->
 														<li><strong>Job card Number</strong>: Select job card number for
 															this invoice.</li>
 
-														<h6>invoice type for sales </h6>
+														<!-- <h6>invoice type for sells </h6>
 														<li><strong>Select vehicle</strong>: Select vehicle for this
-															invoice.</li>
+															invoice.</li> -->
 
 														<li><strong>Date</strong>: Enter a new date for this invoice.
 														</li>
@@ -2333,11 +2466,11 @@
 
 													</ul>
 													<p><strong> View Invoice:</strong> Admin can view a complete list of
-														all Sales and view detail of particular Sales by clicking on
+														all sells and view detail of particular sells by clicking on
 														view detail button. This will open up details.</p><br />
 													<img alt="invoice view" src="images/Admin/Sales_view.png"><br><br>
-													<p><strong> Delete Sales:</strong> Admin can delete a complete list
-														of all Sales and delete detail of particular Sales by clicking
+													<p><strong> Delete sells:</strong> Admin can delete a complete list
+														of all sells and delete detail of particular sells by clicking
 														on delete detail button. This will delete details.</p><br />
 											</section>
 
@@ -2534,7 +2667,7 @@
 														<li><strong>Checkpoint</strong>: Enter a new checkpoint for this
 															observation. </li>
 														<li><strong>Add Checkpoint</strong>: then click on <strong>Add
-																Checkpoint</strong> button. You can add new add
+																Checkpoint (+)</strong> button. You can add new add
 															checkpoint.</li>
 													</ul>
 													<p><strong>Edit Observation:</strong> Admin can Edit detail of
@@ -2549,48 +2682,29 @@
 														delete details.</p><br />
 											</section>
 
-
-											<!-- Quotation Start  -->
-											<section id="Quotation">
-												<h4><strong>16)Quotation</strong></h3><br />
-													<h5>Quotation </h5><br />
-													<p><strong>Quotation List:</strong> Admin can add new Quotation, and
-														view a complete list of all Quotations and process them.</p>
-													<br />
-													<img alt="Quotation list"
-														src="images/Admin/quotation_list.png"><br><br>
-													<p><strong>Add Quotation:</strong> Admin can add Quotation</p><br />
-													<img alt="Quotation add"
-														src="images/Admin/quotation_add.png"><br><br>
-
-													<p><strong>Add Items In Quotation:</strong> Admin can add Quotation
-														items in the quotation details and then he can make quotation as
-														final done by checking final process checkbox. And once
-														quotation is final submited that quotation comes in jobcard list
-														for the further process</p><br />
-													<img alt="Quotation add"
-														src="images/Admin/quotation_add_process.png"><br><br>
-											</section>
-											<!-- Quotation End  -->
-
 											<!-- Branch Start  -->
 											<section id="Branch">
 												<h4><strong>17)Branch</strong></h3><br />
 													<h5>Branch Module</h5><br />
 													<p><strong><span class="text-danger"
-																style="color: red;">*</span>Note:</strong> When first
-														time install this Garage Package at that time you can see only
-														one branch and it is called as a "Main Branch". And this "Main
-														Brach" is not display inside Branch Module. If you can add new
-														Branch then new added Branch will show inside Branch Module with
-														listing page. For Add Branch rights is only for Admin, if Admin
-														want to give rights to Employee or Support Staff then Admin can
-														do it. But it is good practice and advice to add Branch by Admin
-														only, because we are handle multiple branch on single databse
-														and platform, so it is very important thing. If you have not add
-														any Branch then you have only "Main Branch" so Branch related
-														any data not shown inside Branch Module. This module is not for
-														customer use or any kind of view.</p>
+																style="color: red;">*</span>Note:</strong> When the
+														first time
+														install this Garage Package at that time you can see only one
+														branch and it is called as a "Main Branch". And this "Main
+														Brach"
+														is not displayed inside the Branch Module. If you can add a new
+														branch, then the new added branch will show inside the Branch
+														Module on the listing page. For Add Branch rights branch is only
+														for Admin. If Admin wants to give rights to employees or Support
+														Staff, then Admin can do it. But it is good practice and advice
+														to add branches by Admin only, because we handle multiple
+														branches
+														on database and platform, so it is a very important thing. If
+														you
+														have not added any branch, then you have only a "Main Branch",
+														so the branch relates any data not shown inside the Branch
+														Module.
+														This module is not for customer use or any kind of view.</p>
 
 													<p><strong>Branch List:</strong> Admin can add new Branch, and view
 														a complete list of all Branch and also Add, Edit, View and
@@ -2710,7 +2824,10 @@
 
 													<img alt="Employee" src="images/Customer/Employee_list.png"><br><br>
 
+													<p><strong>Employee View:</strong> Customer can view more
+														details of the employee.</p><br />
 
+													<img alt="Employee" src="images/Customer/Employee_View.png"><br><br>
 
 												</section>
 												<!--  SupportStaff Settings  -->
@@ -2722,6 +2839,13 @@
 
 													<img alt="SupportStaff"
 														src="images/Customer/SupportStaff_list.png"><br><br>
+
+													<p><strong>SupportStaff View:</strong> Customer can view more
+														details of the Support Staff.</p><br />
+
+													<img alt="SupportStaff"
+														src="images/Customer/SupportStaff_View.png"><br><br>
+
 												</section>
 												<!--   Accountant Settings  -->
 												<section id="C_Accountant">
@@ -2732,6 +2856,10 @@
 													<img alt="accountant"
 														src="images/Customer/Accountant_list.png"><br><br>
 
+													<p><strong>Accountant View:</strong> Customer can view more
+														details of the accountant.</p><br />
+													<img alt="accountant"
+														src="images/Customer/Accountant_View.png"><br><br>
 												</section>
 											</section>
 
@@ -2774,6 +2902,22 @@
 
 												</section>
 											</section>
+
+											<!-- customer side Quotation   -->
+											<section id="C_Quotation">
+												<h4><strong>9)Quotation</strong></h3><br />
+													<h5>Quotation </h5><br />
+													<p><strong>List Quotation:</strong> Customer can see the only list
+														of Quotation.</p><br />
+													<img alt="Quotation List"
+														src="images/Customer/quotation_list.png"><br><br>
+
+													<p><strong> View Quotation:</strong> Customer can view only
+														Quotation details.</p><br />
+													<img alt="Quotation View"
+														src="images/Customer/quotation_view.png"><br><br><br>
+											</section>
+
 
 											<!-- Invoice   -->
 											<section id="C_Invoice">
@@ -2832,7 +2976,7 @@
 														Receipt details.From here Customer can also Print Out view Gate
 														Receipt.</p><br />
 													<img alt="Gate Receipt view"
-														src="images/Customer/Gatepass_view.png"><br><br>
+														src="images/Admin/Gatepass_view.png"><br><br>
 												</section>
 											</section>
 
@@ -2848,22 +2992,6 @@
 														details.</p><br />
 													<img alt="Invoice List"
 														src="images/Customer/Sales_view.png"><br><br><br>
-											</section>
-
-
-											<!-- customer side Quotation   -->
-											<section id="C_Quotation">
-												<h4><strong>9)Quotation</strong></h3><br />
-													<h5>Quotation </h5><br />
-													<p><strong>List Quotation:</strong> Customer can see the only list
-														of Quotation.</p><br />
-													<img alt="Quotation List"
-														src="images/Customer/quotation_list.png"><br><br>
-
-													<p><strong> View Quotation:</strong> Customer can view only
-														Quotation details.</p><br />
-													<img alt="Quotation View"
-														src="images/Customer/quotation_view.png"><br><br><br>
 											</section>
 
 											<!-- Employee_view -->
@@ -3149,7 +3277,13 @@
 													</ul>
 													<p><strong>View Stock:</strong> Employee can view the particular
 														stock details.</p><br />
-													<img alt="Stock" src="images/Employee/Stoke_view.png"><br><br>
+													<img alt="Stock" src="images/Employee/Stoke_view.png"><br><br><br>
+
+													<p><strong>Manage Stock:</strong> Employee can manage the quantity
+														of a
+														particular stock.</p><br />
+													<img alt="Stock" src="images/Admin/Stock_manage.png"><br><br>
+													<br>
 
 													<hr>
 												</section>
@@ -3437,6 +3571,30 @@
 												</section>
 											</section>
 
+											<!-- Quotation   -->
+											<section id="E_Quotation">
+												<h4><strong>10)Quotation</strong></h3><br />
+													<h5>Quotation </h5><br />
+													<p><strong>Quotation List:</strong> Employee can add new Quotation,
+														and view a complete list of all Quotations and process them.</p>
+													<br />
+													<img alt="Quotation list"
+														src="images/Admin/quotation_list.png"><br><br>
+													<p><strong>Add Quotation:</strong> Employee can add Quotation</p>
+													<br />
+													<img alt="Quotation add"
+														src="images/Admin/quotation_add.png"><br><br>
+
+													<p><strong>Add Items In Quotation:</strong> Employee can add
+														Quotation items in the quotation details and then he can make
+														quotation as final done by checking final process checkbox. And
+														once quotation is final submited that quotation comes in jobcard
+														list for the further process</p><br />
+													<img alt="Quotation add"
+														src="images/Admin/quotation_add_process.png"><br><br>
+
+											</section>
+
 											<!-- Invoice   -->
 											<section id="E_Invoice">
 												<h4><strong>7)Invoice</strong></h3><br />
@@ -3553,19 +3711,22 @@
 														Receipt details.From here Employee can also Print Out view Gate
 														Receipt.</p><br />
 													<img alt="Gate Receipt view"
-														src="images/Employee/gatepass_view.png"><br><br>
+														src="images/Admin/Gatepass_view.png"><br><br>
 												</section>
 											</section>
 
 											<!-- Sales   -->
 											<section id="E_Sales">
-												<h4><strong>9)Sales</strong></h3><br />
-													<h5>Sales </h5><br />
-													<p><strong>List Sales:</strong> Employee can see the only list of
-														Sales.</p><br />
-													<img alt="Sales List" src="images/Employee/Sales_list.png"><br><br>
-
-													<p><strong> View Invoice:</strong> Employee can view only Sales
+												<h4><strong>9)Sells</strong></h3><br />
+													<!-- <h5>Sells </h5><br /> -->
+													<!-- <p><strong>Vehicle Sells:</strong> Employee can see the only list of
+														Vehicle Sells.</p><br />
+													<img alt="Sales List" src="images/Employee/Sales_list.png"><br><br> -->
+													<p><strong>Part Sells:</strong> Employee can see the only list of
+														Part Sells.</p><br />
+													<img alt="Sales List"
+														src="images/Employee/Part_Sales_list.png"><br><br>
+													<p><strong> View Invoice:</strong> Employee can view only Sells
 														details.</p><br />
 													<img alt="Sales List" src="images/Employee/Sales_view.png"><br><br>
 											</section>
@@ -3859,31 +4020,13 @@
 														particular stock details.</p><br />
 													<img alt="Stock" src="images/SupportStaff/Stoke_view.png"><br><br>
 													<br>
+
+													<p><strong>Manage Stock:</strong> Support Staff can manage the
+														quantity of a
+														particular stock.</p><br />
+													<img alt="Stock" src="images/Admin/Stock_manage.png"><br><br>
+													<br>
 												</section>
-											</section>
-
-											<!-- Quotation   -->
-											<section id="E_Quotation">
-												<h4><strong>10)Quotation</strong></h3><br />
-													<h5>Quotation </h5><br />
-													<p><strong>Quotation List:</strong> Employee can add new Quotation,
-														and view a complete list of all Quotations and process them.</p>
-													<br />
-													<img alt="Quotation list"
-														src="images/Admin/quotation_list.png"><br><br>
-													<p><strong>Add Quotation:</strong> Employee can add Quotation</p>
-													<br />
-													<img alt="Quotation add"
-														src="images/Admin/quotation_add.png"><br><br>
-
-													<p><strong>Add Items In Quotation:</strong> Employee can add
-														Quotation items in the quotation details and then he can make
-														quotation as final done by checking final process checkbox. And
-														once quotation is final submited that quotation comes in jobcard
-														list for the further process</p><br />
-													<img alt="Quotation add"
-														src="images/Admin/quotation_add_process.png"><br><br>
-
 											</section>
 
 											<!--  Users   -->
@@ -4475,6 +4618,30 @@
 															delete details.</p><br />
 												</section>
 											</section>
+
+											<!-- Quotation   -->
+											<section id="S_Quotation">
+												<h4><strong>Quotation</strong></h3><br />
+													<p><strong>Quotation List:</strong> Support Staff can add new
+														Quotation, and view a complete list of all Quotations and
+														process them.</p><br />
+													<img alt="Quotation list"
+														src="images/Admin/quotation_list.png"><br><br>
+													<p><strong>Add Quotation:</strong> Support Staff can add Quotation
+													</p><br />
+													<img alt="Quotation add"
+														src="images/Admin/quotation_add.png"><br><br>
+
+													<p><strong>Add Items In Quotation:</strong> Support Staff can add
+														Quotation items in the quotation details and then he can make
+														quotation as final done by checking final process checkbox. And
+														once quotation is final submited that quotation comes in jobcard
+														list for the further process</p><br />
+													<img alt="Quotation add"
+														src="images/Admin/quotation_add_process.png"><br><br>
+
+											</section>
+
 											<!-- Invoice   -->
 											<section id="S_Invoice">
 												<h4><strong>7)Invoice</strong></h3><br />
@@ -4496,13 +4663,13 @@
 															generated.</li>
 														<li><strong>Customer Name</strong>: Select customer name for
 															this invoice.</li>
-														<h6>invoice type for service </h6>
+														<!-- <h6>invoice type for service </h6> -->
 														<li><strong>Job card Number</strong>: Select job card number for
 															this invoice.</li>
 
-														<h6>invoice type for sales </h6>
+														<!-- <h6>invoice type for sales </h6>
 														<li><strong>Select vehicle</strong>: Select vehicle for this
-															invoice.</li>
+															invoice.</li> -->
 
 														<li><strong>Date</strong>: Enter a new date for this invoice.
 														</li>
@@ -4730,13 +4897,13 @@
 																generated.</li>
 															<li><strong>Customer Name</strong>: Select customer name for
 																this invoice.</li>
-															<h6>invoice type for service </h6>
+															<!-- <h6>invoice type for service </h6> -->
 															<li><strong>Job card Number</strong>: Select job card number
 																for this invoice.</li>
 
-															<h6>invoice type for sales </h6>
+															<!-- <h6>invoice type for sales </h6>
 															<li><strong>Select vehicle</strong>: Select vehicle for this
-																invoice.</li>
+																invoice.</li> -->
 
 															<li><strong>Date</strong>: Enter a new date for this
 																invoice.</li>
@@ -4802,7 +4969,7 @@
 															button. This will open up details.From here Support Staff
 															can also Print Out Gate Receipt.</p><br />
 														<img alt="Gate Receipt view"
-															src="images/SupportStaff/gatepass_view.PNG"><br><br>
+															src="images/Admin/Gatepass_view.png"><br><br>
 												</section>
 												<!-- Gate pass -->
 												<section id="S_Gatepass">
@@ -4854,7 +5021,7 @@
 														open up details.From here Support Staff can also Print Out Gate
 														Receipt.</p><br />
 													<img alt="Gate Receipt view"
-														src="images/SupportStaff/gatepass_view.PNG"><br><br>
+														src="images/Admin/Gatepass_view.png"><br><br>
 													<p><strong> Delete Gate pass:</strong> Support Staff can delete a
 														complete list of all gate pass and delete detail of particular
 														gate pass by clicking on delete detail button. This will delete
@@ -5035,48 +5202,55 @@
 
 											<!-- Sales   -->
 											<section id="S_Sales">
-												<h4><strong>10)Sales</strong></h3><br />
-													<h5>Sales </h5><br />
-													<p><strong>List Sales:</strong> Support Staff can add new Sales,
-														Sales all Sales and view a complete list of all Sales.</p><br />
+												<h4><strong>10)Sells</strong></h3><br />
+													<!-- <h5>Sells </h5><br /> -->
+													<!-- <p><strong>Vehicle Sells:</strong> Support Staff can add new sells,
+														edit all sells and view a complete list of all sells.</p><br />
 													<img alt="Sales List"
-														src="images/SupportStaff/Sales_list.png"><br><br>
-													<p><strong>Add Sales:</strong> Support Staff can add Sales details
+														src="images/SupportStaff/Sales_list.png"><br><br> -->
+													<p><strong>Part Sells:</strong> Support Staff can add new sells,
+														edit all sells and view a complete list of all sells.</p><br />
+													<img alt="Sales List"
+														src="images/Admin/Part_Sales_list.png"><br><br>
+													<p><strong>Add Sells:</strong> Support Staff can add sells details
 													</p><br />
-													<img alt="Sales add"
-														src="images/SupportStaff/Sales_add.png"><br><br>
+													<img alt="Sales add" src="images/Admin/Sales_add.png"><br><br>
 													<ul>
 														<li><strong>Bill number</strong>: Bill number auto generated.
 														</li>
-														<li><strong>Status</strong>: Select status for this sales.</li>
+														<!-- <li><strong>Status</strong>: Select status for this sales.</li> -->
 														<li><strong>Customer Name</strong>: Select customer name for
 															this sales.</li>
 														<li><strong>Sales Date</strong>: Enter a new sales date for this
 															sales.</li>
-														<li><strong>Vehicle Brand</strong>: Select vehicle brand for
-															this sales.</li>
+														<!-- <li><strong>Vehicle Brand</strong>: Select vehicle brand for
+															this sales.</li> -->
 														<li><strong>Quantity</strong>: Enter a new quantity for this
 															sales.</li>
-														<li><strong>Select Model</strong>: Select model for this sales.
+														<!-- <li><strong>Select Model</strong>: Select model for this sales.
 														</li>
 														<li><strong>Chassis</strong>: Select model and auto generated
 															chassis.</li>
 														<li><strong>Select PaymentType</strong>: Select paymenttype for
-															this sales.</li>
-														<li><strong>Price</strong>: Select model and auto generated
+															this sales.</li> -->
+														<li><strong>Price</strong>: Select product name and auto
+															generated
 															price.</li>
-														<li><strong>Color</strong>: Select color for this sales.</li>
+														<!-- <li><strong>Color</strong>: Select color for this sales.</li>
 														<li><strong>Add Or Remove</strong>: If the desired color is not
 															available in a list then click on <strong>Add Or
 																Remove</strong> button. You can add new color from here.
 														</li>
 														<img alt="color"
-															src="images/SupportStaff/Sales_add_color.png"><br><br>
-														<li><strong>Total price</strong>: Select model and quantity and
+															src="images/SupportStaff/Sales_add_color.png"><br><br> -->
+														<li><strong>Total price</strong>: Select product name and
+															quantity and
 															auto generated total price.</li>
 														<li><strong>Salesman</strong>: Select salesman for this sales.
 														</li>
-														<h6>No of Service</h6>
+														<li><strong>Branch</strong>: Select branch for this sales.
+														</li>
+														<!-- <h6>No of Service</h6>
 														<li><strong>Interval</strong>: Select interval for this sales.
 														</li>
 														<li><strong>Date Gap</strong>: Select date gap for this sales.
@@ -5084,14 +5258,13 @@
 														<li><strong>Number of services</strong>: Select number of
 															service for this sales.</li>
 														<li><strong>AssignTo</strong>: Select assignto for this sales.
-														</li>
+														</li> -->
 													</ul>
-													<p><strong>Edit Sales:</strong> Support Staff can Edit detail of
-														particular Sales by clicking on Edit detail button. This will
-														open up details. From here Support Staff can Change Sales
+													<p><strong>Edit Sells:</strong> Support Staff can Edit detail of
+														particular sells by clicking on Edit detail button. This will
+														open up details. From here Support Staff can Change sells
 														Details.</p><br />
-													<img alt="Sales edit"
-														src="images/SupportStaff/Sales_edit.png"><br><br>
+													<img alt="Sales edit" src="images/Admin/Sales_edit.png"><br><br>
 													<p><strong>Create Invoice:</strong> Support Staff can Create invoice
 														details</p><br />
 													<img alt="invoice add"
@@ -5103,13 +5276,13 @@
 															generated.</li>
 														<li><strong>Customer Name</strong>: Select customer name for
 															this invoice.</li>
-														<h6>invoice type for service </h6>
+														<!-- <h6>invoice type for service </h6> -->
 														<li><strong>Job card Number</strong>: Select job card number for
 															this invoice.</li>
 
-														<h6>invoice type for sales </h6>
+														<!-- <h6>invoice type for sales </h6>
 														<li><strong>Select vehicle</strong>: Select vehicle for this
-															invoice.</li>
+															invoice.</li> -->
 
 														<li><strong>Date</strong>: Enter a new date for this invoice.
 														</li>
@@ -5134,13 +5307,13 @@
 
 													</ul>
 													<p><strong> View Invoice:</strong> Support Staff can view a complete
-														list of all Sales and view detail of particular Sales by
+														list of all sells and view detail of particular sells by
 														clicking on view detail button. This will open up details.</p>
 													<br />
 													<img alt="invoice view"
 														src="images/SupportStaff/invoice_view.png"><br><br>
 													<p><strong> Delete Sales:</strong> Support Staff can delete a
-														complete list of all Sales and delete detail of particular Sales
+														complete list of all sells and delete detail of particular sells
 														by clicking on delete detail button. This will delete details.
 													</p><br />
 											</section>
@@ -5363,28 +5536,6 @@
 														delete details.</p><br />
 											</section>
 
-											<!-- Quotation   -->
-											<section id="S_Quotation">
-												<h4><strong>Quotation</strong></h3><br />
-													<p><strong>Quotation List:</strong> Support Staff can add new
-														Quotation, and view a complete list of all Quotations and
-														process them.</p><br />
-													<img alt="Quotation list"
-														src="images/Admin/quotation_list.png"><br><br>
-													<p><strong>Add Quotation:</strong> Support Staff can add Quotation
-													</p><br />
-													<img alt="Quotation add"
-														src="images/Admin/quotation_add.png"><br><br>
-
-													<p><strong>Add Items In Quotation:</strong> Support Staff can add
-														Quotation items in the quotation details and then he can make
-														quotation as final done by checking final process checkbox. And
-														once quotation is final submited that quotation comes in jobcard
-														list for the further process</p><br />
-													<img alt="Quotation add"
-														src="images/Admin/quotation_add_process.png"><br><br>
-
-											</section>
 
 											<!-- Accountant View  -->
 											<section id="Accountant_view">
@@ -5671,6 +5822,12 @@
 													<p><strong>View Stock:</strong> Accountant can view the particular
 														stock details.</p><br />
 													<img alt="Stock" src="images/Accountant/Stoke_view.PNG"><br><br>
+													<br>
+
+													<p><strong>Manage Stock:</strong> Accountant can manage the quantity
+														of a
+														particular stock.</p><br />
+													<img alt="Stock" src="images/Admin/Stock_manage.png"><br><br>
 													<br>
 												</section>
 											</section>
@@ -6286,13 +6443,13 @@
 															generated.</li>
 														<li><strong>Customer Name</strong>: Select customer name for
 															this invoice.</li>
-														<h6>invoice type for service </h6>
+														<!-- <h6>invoice type for service </h6> -->
 														<li><strong>Job card Number</strong>: Select job card number for
 															this invoice.</li>
 
-														<h6>invoice type for sales </h6>
+														<!-- <h6>invoice type for sales </h6>
 														<li><strong>Select vehicle</strong>: Select vehicle for this
-															invoice.</li>
+															invoice.</li> -->
 
 														<li><strong>Date</strong>: Enter a new date for this invoice.
 														</li>
@@ -6520,13 +6677,13 @@
 																generated.</li>
 															<li><strong>Customer Name</strong>: Select customer name for
 																this invoice.</li>
-															<h6>invoice type for service </h6>
+															<!-- <h6>invoice type for service </h6> -->
 															<li><strong>Job card Number</strong>: Select job card number
 																for this invoice.</li>
 
-															<h6>invoice type for sales </h6>
+															<!-- <h6>invoice type for sales </h6>
 															<li><strong>Select vehicle</strong>: Select vehicle for this
-																invoice.</li>
+																invoice.</li> -->
 
 															<li><strong>Date</strong>: Enter a new date for this
 																invoice.</li>
@@ -6592,7 +6749,7 @@
 															button. This will open up details.From here Accountant can
 															also Print Out Gate Receipt.</p><br />
 														<img alt="Gate Receipt view"
-															src="images/Accountant/gatepass_view.PNG"><br><br>
+															src="images/Admin/Gatepass_view.png"><br><br>
 												</section>
 												<!-- Gate pass -->
 												<section id="A_Gatepass">
@@ -6644,7 +6801,7 @@
 														open up details.From here Accountant can also Print Out Gate
 														Receipt.</p><br />
 													<img alt="Gate Receipt view"
-														src="images/Accountant/gatepass_view.PNG"><br><br>
+														src="images/Admin/Gatepass_view.png"><br><br>
 													<p><strong> Delete Gate pass:</strong> Accountant can delete a
 														complete list of all gate pass and delete detail of particular
 														gate pass by clicking on delete detail button. This will delete
@@ -6825,61 +6982,63 @@
 											<!-- Sales   -->
 											<section id="A_Sales">
 												<h4><strong>10)Sales</strong></h3><br />
-													<h5>Sales </h5><br />
-													<p><strong>List Sales:</strong> Accountant can add new Sales, Sales
-														all Sales and view a complete list of all Sales.</p><br />
+													<p><strong>Part Sells:</strong> Accountant can add new sells,
+														edit all sells and view a complete list of all sells.</p><br />
 													<img alt="Sales List"
-														src="images/Accountant/Sales_list.png"><br><br>
-													<p><strong>Add Sales:</strong> Accountant can add Sales details</p>
-													<br />
-													<img alt="Sales add" src="images/Accountant/Sales_add.png"><br><br>
+														src="images/Admin/Part_Sales_list.png"><br><br>
+													<p><strong>Add Sells:</strong> Accountant can add sells details
+													</p><br />
+													<img alt="Sales add" src="images/Admin/Sales_add.png"><br><br>
 													<ul>
 														<li><strong>Bill number</strong>: Bill number auto generated.
 														</li>
-														<li><strong>Status</strong>: Select status for this sales.</li>
+														<!-- <li><strong>Status</strong>: Select status for this sales.</li> -->
 														<li><strong>Customer Name</strong>: Select customer name for
 															this sales.</li>
-														<li><strong>Sales Date</strong>: Enter a new date for this
+														<li><strong>Sales Date</strong>: Enter a new sales date for this
 															sales.</li>
-														<li><strong>Vehicle Brand</strong>: Select vehicle brand for
-															this sales.</li>
+														<!-- <li><strong>Vehicle Brand</strong>: Select vehicle brand for
+															this sales.</li> -->
 														<li><strong>Quantity</strong>: Enter a new quantity for this
 															sales.</li>
-														<li><strong>Select Model</strong>: Select model for this sales.
+														<!-- <li><strong>Select Model</strong>: Select model for this sales.
 														</li>
 														<li><strong>Chassis</strong>: Select model and auto generated
 															chassis.</li>
-														<li><strong>Select PaymentType</strong>: Select payment type for
-															this sales.</li>
-														<li><strong>Price</strong>: Select model and auto generated
+														<li><strong>Select PaymentType</strong>: Select paymenttype for
+															this sales.</li> -->
+														<li><strong>Price</strong>: Select product name and auto
+															generated
 															price.</li>
-														<li><strong>Color</strong>: Select color for this sales.</li>
+														<!-- <li><strong>Color</strong>: Select color for this sales.</li>
 														<li><strong>Add Or Remove</strong>: If the desired color is not
 															available in a list then click on <strong>Add Or
 																Remove</strong> button. You can add new color from here.
 														</li>
 														<img alt="color"
-															src="images/Accountant/Sales_add_color.PNG"><br><br>
-														<li><strong>Total price</strong>: Select model and quantity and
+															src="images/SupportStaff/Sales_add_color.png"><br><br> -->
+														<li><strong>Total price</strong>: Select product name and
+															quantity and
 															auto generated total price.</li>
 														<li><strong>Salesman</strong>: Select salesman for this sales.
 														</li>
-														<h6>No of Service</h6>
+														<li><strong>Branch</strong>: Select branch for this sales.
+														</li>
+														<!-- <h6>No of Service</h6>
 														<li><strong>Interval</strong>: Select interval for this sales.
 														</li>
-														<li><strong>Date Gape</strong>: Select date gap for this sales.
+														<li><strong>Date Gap</strong>: Select date gap for this sales.
 														</li>
 														<li><strong>Number of services</strong>: Select number of
 															service for this sales.</li>
 														<li><strong>AssignTo</strong>: Select assignto for this sales.
-														</li>
+														</li> -->
 													</ul>
-													<p><strong>Edit Sales:</strong> Accountant can Edit detail of
-														particular Sales by clicking on Edit detail button. This will
-														open up details. From here Accountant can Change Sales Details.
-													</p><br />
-													<img alt="Sales edit"
-														src="images/Accountant/Sales_edit.png"><br><br>
+													<p><strong>Edit Sells:</strong> Accountant can Edit detail of
+														particular sells by clicking on Edit detail button. This will
+														open up details. From here Accountant can Change sells
+														Details.</p><br />
+													<img alt="Sales edit" src="images/Admin/Sales_edit.png"><br><br>
 													<p><strong>Create Invoice:</strong> Accountant can Create invoice
 														details</p><br />
 													<img alt="invoice add"
@@ -6891,13 +7050,13 @@
 															generated.</li>
 														<li><strong>Customer Name</strong>: Select customer name for
 															this invoice.</li>
-														<h6>invoice type for service </h6>
+														<!-- <h6>invoice type for service </h6> -->
 														<li><strong>Job card Number</strong>: Select job card number for
 															this invoice.</li>
 
-														<h6>invoice type for sales </h6>
+														<!-- <h6>invoice type for sales </h6>
 														<li><strong>Select vehicle</strong>: Select vehicle for this
-															invoice.</li>
+															invoice.</li> -->
 
 														<li><strong>Date</strong>: Enter a new date for this invoice.
 														</li>
@@ -7145,19 +7304,125 @@
 														Observation by clicking on delete detail button. This will
 														delete details.</p><br />
 											</section>
+
+											<!-- Patch -->
+											<section id="Patch">
+												<h3><strong>J)Patch </strong></h3><br>
+												<h4><strong>1) Backup Your Database and Code:</strong></h4>
+												<p>Before proceeding with the update, ensure the safety of your existing
+													database and code by creating a backup.</p>
+
+												<h4><strong>2) Replace the Old Garage Folder:</strong></h4>
+												<p>Locate your current garage folder and replace it with the new one
+													using FTP.
+												</p>
+												<img alt="Patch" src="images/patch1.png"><br><br>
+												<p>Update the new code by replacing the old `.env` file with your
+													specific configurations.</p>
+												<img alt="Patch" src="images/patch2.png"><br><br>
+
+												<h4><strong>3) Log in to Your System:</strong></h4>
+												<p>Access the system using administrative credentials.</p>
+
+												<h4><strong>4) Read Instructions and Update:</strong></h4>
+												<p>Carefully review the provided instructions.</p>
+												<img alt="Patch" src="images/patch3.png"><br><br>
+												<p>Click "Install Update" to apply the changes.</p>
+												<img alt="Patch" src="images/patch4.png"><br><br>
+												<p>If you click "Yes, update!" it will update your database and show the
+													popup below.</p>
+												<img alt="Patch" src="images/patch5.png"><br><br>
+												<b>Note: </b>Any code customizations will not be included in the new
+												system.<br><br>
+											</section>
 											<!-- FAQ -->
 											<section id="FAQ">
 
-												<h3><strong>J)FAQ </strong></h3><br>
+												<h3><strong>K)FAQ </strong></h3><br>
 												<h4><strong>1) I Don't see Installer Page properly.No background image,
 														no Next button nothing. </strong></h4><br>
-												<p> Make Sure you have .htaccess file on main directory[in Garage
+												<p> Make Sure you have <strong>.htaccess</strong> file on main
+													directory[in Garage
 													folder].Where resources,Controllers,config directory[].</p>
-												<p>If you already have .htaccess Make sure your host has a mod_rewrite
+												<p>If you already have <strong>.htaccess</strong> Make sure your host
+													has a mod_rewrite
 													module on.Basically on apache server.</p>
 												<p>If you want to have any paid customization as per your requirements,
-													you can contact us on sales@mojoomla.com.</p><br />
+													you can contact us on sales@mojoomla.com.</p>
 												<hr>
+
+												<h4><strong>2)How can i resolve the 'SQLSTATE[28000][1045] access denied
+														for user error during installation. </strong></h4>
+												<img alt="FAQs" src="images/faq2.png"><br><br>
+												<p>You need to enter the correct database credentials.</p>
+												<p>Log in to cPanel. <a href="https://store.cpanel.net/login/"
+														target="_blank">Click here</a> & Verify correct database
+													credentials (host, username, password, and database name).</p>
+												<p>Ensure that the database user has the appropriate privileges to
+													access and modify the database. At a minimum, the user should have
+													SELECT, INSERT, UPDATE, DELETE, and CREATE privileges on the
+													database.</p>
+												<hr>
+
+												<h4><strong>3) In installation i get error integrity constraint
+														violation:1062 Duplicate entry '1' for key 'PRIMARY'
+													</strong></h4>
+												<img alt="FAQs" src="images/faq3.png"><br><br>
+												<p>Make Sure you have an empty database.</p>
+												<p>If you already have data in the database, take a backup of your data
+													before making any changes to prevent data loss.
+												</p>
+												<p>Now you need to delete all tables from the database and do the
+													installation again.
+												</p>
+												<hr>
+
+												<h4><strong>4) I am not able to install, the installation process keeps
+														restarting without completing. </strong></h4>
+												<br>
+												<p>It seems that there might be an issue with the password entry.</p>
+												<p>Please ensure that your password is a combination of characters,
+													special characters, and numbers. So enter the proper password in the
+													installation process.</p>
+												<hr>
+
+												<h4><strong>5) I am not able to login all user login says error 403|This
+														action is unauthorized.
+													</strong></h4>
+												<br>
+												<p>Please clear the browser cache once and try again.
+												</p>
+												<hr>
+
+												<h4><strong>6) I got an error when trying to install, No application
+														encryption key has been specified. </strong></h4>
+												<br>
+												<p>In order to solve this issue, you will have to generate an APP KEY
+													which is located within your .env (environment) file.
+												</p>
+												<p>To generate the key, you can run the Laravel Artisan key generate
+													command in your terminal. Once the command has been completed, you
+													can try again and refresh your page to ensure that the changes have
+													taken effect.</p>
+												<p>Laravel Artisan key generate command : <strong>php artisan
+														key:generate</strong></p>
+												<hr>
+
+												<h4><strong>7) I found this error message composer detected issues in
+														your platform: your composer dependencies require a PHP version
+														">=8.1.2" Is it not possible to use the above? </strong></h4>
+												<br>
+												<p>Please check your CLI(Terminal) or shell version of PHP, it must be
+													8.1.2 or higher.
+												</p>
+												<p>To check php version, Goto Garage app installed folder and run
+													command <strong>“php -v”</strong></p>
+												<p>You can update php version from cPanel <a
+														href="https://support.cpanel.net/hc/en-us/articles/360052624713-How-to-change-the-PHP-version-for-a-domain-in-cPanel-or-WHM"
+														target="_blank">Click
+														here </a>or contact your host.</p>
+												<hr>
+
 											</section>
 											<!-- start-footer-->
 											<div id="footer-sm"> © 2018 Youjoomla All Rights Reserved. </div>
