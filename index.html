@@ -409,7 +409,7 @@
 											<p>However, if you are not using Homestead, you will need to make sure your
 												server meets the following requirements:</p>
 											<ol>
-												<li>PHP version >= 8.0</li>
+												<li>PHP version >= 8.1</li>
 
 												</li>
 												<li>Downlod <a href="https://getcomposer.org/"
@@ -427,14 +427,23 @@
 											<li>Mbstring PHP Extension</li>
 											<li>OpenSSL PHP Extension</li>
 											<li>PDO PHP Extension</li>
+											<li>pdo_mysql Driver</li>
 											<li>Tokenizer PHP Extension</li>
 											<li>XML PHP Extension</li>
+											<li>PHP mail()</li>
 											<br /><br />
 
 											<section>
 												<h3><strong>B) Installation:</strong></h3><br>
 
-												<h4>1)Purchase Information</h4><br />
+												<h4>1)Requirements</h4><br />
+												<img src="images/Installer/Installer2.png" /><br><br>
+
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is fail
+												then you are not able to install this package. check all requirements
+												and click on Next Step.<br><br>
+
+												<h4>2)Purchase Information</h4><br />
 												<img src="images/Installer/Installer1.png" /><br><br>
 
 												<ol>
@@ -443,13 +452,6 @@
 													<li><strong>E-mail : </strong>Enter your purchasekey time email.
 													</li>
 												</ol>
-
-												<h4>2)Requirements</h4><br />
-												<img src="images/Installer/Installer2.png" /><br><br>
-
-												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is fail
-												then you are not able to install this package. check all requirements
-												and click on Next Step.<br><br>
 
 												<h4>3)Database setup</h4><br />
 												<img src="images/Installer/Installer3.png" /><br><br>
@@ -2513,7 +2515,7 @@
 											<!--  Report   -->
 											<section id="Report">
 												<h4><strong>12)Report</strong></h3><br />
-													<h5>A)Vehicle Sales Report </h5><br />
+													<!-- <h5>A)Vehicle Sales Report </h5><br />
 													<p>You can start date and end date of view Vehicle Sales report.</p>
 													<br />
 													<img alt="Sales report" src="images/Admin/Report_sales.png"><br><br>
@@ -2526,9 +2528,9 @@
 															vehicle sales report.</li>
 													</ul><br />
 													<p>When clicking on GO button. This will open Start Date and End
-														date Between In vehicle sales Report and vehicle sales list.</p>
+														date Between In vehicle sales Report and vehicle sales list.</p> -->
 
-													<h5>B)Service Report </h5><br />
+													<h5>A)Service Report </h5><br />
 													<p>You can start date and end date of view Service report.</p><br />
 													<img alt="Service report"
 														src="images/Admin/Report_service.png"><br><br>
@@ -2543,7 +2545,7 @@
 													<p>When clicking on GO button. This will open Start Date and End
 														date Between In Service Report and Service list.</p>
 
-													<h5>C)Product Stock </h5><br />
+													<h5>B)Product Stock </h5><br />
 													<p>You can Manufacturer Name and Product Name of view Product stock
 														report.</p><br />
 													<img alt="Product report"
@@ -2557,7 +2559,7 @@
 													<p>When clicking on GO button. This will open In Product stock list.
 													</p>
 
-													<h5>D)Product Usage </h5><br />
+													<h5>C)Product Usage </h5><br />
 													<p>You can start date and end date of view Product Usage report.</p>
 													<br />
 													<img alt="Product report"
@@ -2579,9 +2581,9 @@
 														Product Usage by clicking on view detail button. This will open
 														up details.</p><br />
 													<img alt="invoice view"
-														src="images/Accountant/Report_productusage.png"><br><br>
+														src="images/Admin/Report_productusage.png"><br><br>
 
-													<h5>E)Employee Service Report </h5><br />
+													<h5>D)Employee Service Report </h5><br />
 													<p>You can start date and end date of view Employee Service report.
 													</p><br />
 													<img alt="Employee report"
@@ -2910,7 +2912,7 @@
 													<p><strong>List Quotation:</strong> Customer can see the only list
 														of Quotation.</p><br />
 													<img alt="Quotation List"
-														src="images/Customer/quotation_list.png"><br><br>
+														src="images/Admin/quotation_list.png"><br><br>
 
 													<p><strong> View Quotation:</strong> Customer can view only
 														Quotation details.</p><br />
@@ -5359,7 +5361,7 @@
 												<!-- Income   -->
 												<section id="S_Report">
 													<h4><strong>12)Report</strong></h3><br />
-														<h5>A)Vehicle Sales Report </h5><br />
+														<!-- <h5>A)Vehicle Sales Report </h5><br />
 														<p>You can start date and end date of view Vehicle Sales report.
 														</p><br />
 														<img alt="Sales report"
@@ -5374,13 +5376,13 @@
 														</ul><br />
 														<p>When clicking on GO button. This will open Start Date and End
 															date Between In vehicle sales Report and vehicle sales list.
-														</p>
+														</p> -->
 
-														<h5>B)Service Report </h5><br />
+														<h5>A)Service Report </h5><br />
 														<p>You can start date and end date of view Service report.</p>
 														<br />
 														<img alt="Service report"
-															src="images/SupportStaff/Report_service.png"><br><br>
+															src="images/Admin/Report_service.png"><br><br>
 														<ul>
 															<li><strong>Start Date</strong>: Enter a new start date for
 																this service report.</li>
@@ -5392,11 +5394,11 @@
 														<p>When clicking on GO button. This will open Start Date and End
 															date Between In Service Report and Service list.</p>
 
-														<h5>C)Product Stock </h5><br />
+														<h5>B)Product Stock </h5><br />
 														<p>You can Manufacturer Name and Product Name of view Product
 															stock report.</p><br />
 														<img alt="Product report"
-															src="images/SupportStaff/Report_product.png"><br><br>
+															src="images/Admin/Report_product.png"><br><br>
 														<ul>
 															<li><strong>Select Manufacturer Name</strong>: Select
 																manufacturer name for this product stock.</li>
@@ -5406,11 +5408,11 @@
 														<p>When clicking on GO button. This will open In Product stock
 															Report.</p>
 
-														<h5>D)Product Usage </h5><br />
+														<h5>C)Product Usage </h5><br />
 														<p>You can start date and end date of view Product Usage report.
 														</p><br />
 														<img alt="Product report"
-															src="images/SupportStaff/Report_productusage.png"><br><br>
+															src="images/Admin/Report_productusage.png"><br><br>
 														<ul>
 															<li><strong>Start Date</strong>: Enter a new start date for
 																this product usage report.</li>
@@ -5429,13 +5431,13 @@
 															particular Product Usage by clicking on view detail button.
 															This will open up details.</p><br />
 														<img alt="invoice view"
-															src="images/Accountant/Report_productusage.png"><br><br>
+															src="images/Admin/Report_productusage.png"><br><br>
 
-														<h5>E)Employee Service Report </h5><br />
+														<h5>D)Employee Service Report </h5><br />
 														<p>You can start date and end date of view Employee Service
 															report.</p><br />
 														<img alt="Employee report"
-															src="images/SupportStaff/Report_empservice.png"><br><br>
+															src="images/Admin/Report_empservice.png"><br><br>
 														<ul>
 															<li><strong>Start Date</strong>: Enter a new start date for
 																this employee service report.</li>
@@ -5765,7 +5767,7 @@
 														particular Purchase by clicking on view detail button. This will
 														open up details.</p><br />
 													<img alt="view detail"
-														src="images/Accountant/Purchase_view.PNG"><br /><br />
+														src="images/Accountant/Purchase_view.png"><br /><br />
 
 													<p><strong>Edit Purchase:</strong>
 														Accountant can Edit detail of particular Purchase by clicking on
@@ -5821,7 +5823,7 @@
 													</ul>
 													<p><strong>View Stock:</strong> Accountant can view the particular
 														stock details.</p><br />
-													<img alt="Stock" src="images/Accountant/Stoke_view.PNG"><br><br>
+													<img alt="Stock" src="images/Accountant/Stoke_view.png"><br><br>
 													<br>
 
 													<p><strong>Manage Stock:</strong> Accountant can manage the quantity
@@ -6138,7 +6140,7 @@
 																	Remove</strong> button. You can add new vehicle type
 																from here.</li>
 															<img alt="Vehicle type"
-																src="images/Accountant/Vehicle_add_vehicletype.PNG"><br><br>
+																src="images/Accountant/Vehicle_add_vehicletype.png"><br><br>
 
 															<li><strong>Chasis No</strong>: Enter a new chasis number
 																for this vehicle.</li>
@@ -6150,7 +6152,7 @@
 																	Remove</strong> button. You can add new vehicle
 																brand from here.</li>
 															<img alt="vehicle brand"
-																src="images/Accountant/Vehicle_add_vehiclebrand.PNG"><br><br>
+																src="images/Accountant/Vehicle_add_vehiclebrand.png"><br><br>
 
 															<li><strong>Model Year</strong>: Enter a new model year for
 																this vehicle.</li>
@@ -6162,7 +6164,7 @@
 																	Remove</strong> button. You can add new fuel type
 																from here.</li>
 															<img alt="Fuel"
-																src="images/Accountant/Vehicle_add_fualtype.PNG"><br><br>
+																src="images/Accountant/Vehicle_add_fualtype.png"><br><br>
 
 															<li><strong>No of Gear</strong>: Enter a new number of gear
 																for this vehicle.</li>
@@ -6175,7 +6177,7 @@
 																model name from here.
 															</li>
 															<img alt="Model"
-																src="images/Accountant/Vehicle_add_modelname.PNG"><br><br>
+																src="images/Accountant/Vehicle_add_modelname.png"><br><br>
 
 															<li><strong>Price</strong>: Enter a new price for this
 																vehicle.</li>
@@ -6484,7 +6486,7 @@
 														clicking on view detail button. This will open up details.From
 														here Accountant can also Print Out view invoice.</p><br />
 													<img alt="invoice view"
-														src="images/Accountant/invoice_view.PNG"><br><br>
+														src="images/Accountant/invoice_view.png"><br><br>
 													<p><strong> Delete invoice:</strong> Accountant can delete a
 														complete list of all invoice and delete detail of particular
 														invoice by clicking on delete detail button. This will delete
@@ -6713,7 +6715,7 @@
 															open up details.From here Accountant can also Print Out view
 															invoice.</p><br />
 														<img alt="invoice view"
-															src="images/Accountant/Jobcard_viewinvoice.PNG"><br><br>
+															src="images/Accountant/Jobcard_viewinvoice.png"><br><br>
 														<p><strong>Gate Pass:</strong> Accountant can add gate pass
 															details</p><br />
 														<img alt="gate pass add"
@@ -7085,7 +7087,7 @@
 														clicking on view detail button. This will open up details.</p>
 													<br />
 													<img alt="invoice view"
-														src="images/Accountant/sales_invoice_view.PNG"><br><br>
+														src="images/Accountant/sales_invoice_view.png"><br><br>
 													<p><strong> Delete Sales:</strong> Accountant can delete a complete
 														list of all Sales and delete detail of particular Sales by
 														clicking on delete detail button. This will delete details.</p>
@@ -7132,7 +7134,7 @@
 
 											<section id="A_Report">
 												<h4><strong>12)Report</strong></h3><br />
-													<h5>A)Vehicle Sales Report </h5><br />
+													<!-- <h5>A)Vehicle Sales Report </h5><br />
 													<p>You can start date and end date of view Vehicle Sales report.</p>
 													<br />
 													<img alt="Sales report"
@@ -7146,12 +7148,12 @@
 															vehicle sales report.</li>
 													</ul><br />
 													<p>When clicking on GO button. This will open Start Date and End
-														date Between In vehicle sales Report and vehicle sales list.</p>
+														date Between In vehicle sales Report and vehicle sales list.</p> -->
 
-													<h5>B)Service Report </h5><br />
+													<h5>A)Service Report </h5><br />
 													<p>You can start date and end date of view Service report.</p><br />
 													<img alt="Service report"
-														src="images/Accountant/Report_service.png"><br><br>
+														src="images/Admin/Report_service.png"><br><br>
 													<ul>
 														<li><strong>Start Date</strong>: Enter a new start date for this
 															service report.</li>
@@ -7163,11 +7165,11 @@
 													<p>When clicking on GO button. This will open Start Date and End
 														date Between In Service Report and Service list.</p>
 
-													<h5>C)Product Stock </h5><br />
+													<h5>B)Product Stock </h5><br />
 													<p>You can Manufacturer Name and Product Name of view Product stock
 														report.</p><br />
 													<img alt="Product report"
-														src="images/Accountant/Report_product.png"><br><br>
+														src="images/Admin/Report_product.png"><br><br>
 													<ul>
 														<li><strong>Select Manufacturer Name</strong>: Select
 															manufacturer name for this product stock.</li>
@@ -7177,11 +7179,11 @@
 													<p>When clicking on GO button. This will open In Product stock list.
 													</p>
 
-													<h5>D)Product Usage </h5><br />
+													<h5>C)Product Usage </h5><br />
 													<p>You can start date and end date of view Product Usage report.</p>
 													<br />
 													<img alt="Product report"
-														src="images/Accountant/Report_productusage.PNG"><br><br>
+														src="images/Admin/Report_productusage.png"><br><br>
 													<ul>
 														<li><strong>Start Date</strong>: Enter a new start date for this
 															product usage report.</li>
@@ -7200,12 +7202,12 @@
 														Product Usage by clicking on view detail button. This will open
 														up details.</p><br />
 													<img alt="invoice view"
-														src="images/Accountant/Report_productusage.png"><br><br>
-													<h5>E)Employee Service Report </h5><br />
+														src="images/Admin/Report_productusage.png"><br><br>
+													<h5>D)Employee Service Report </h5><br />
 													<p>You can start date and end date of view Employee Service report.
 													</p><br />
 													<img alt="Employee report"
-														src="images/Accountant/Report_empservice.png"><br><br>
+														src="images/Admin/Report_empservice.png"><br><br>
 													<ul>
 														<li><strong>Start Date</strong>: Enter a new start date for this
 															employee service report.</li>
@@ -7286,7 +7288,7 @@
 																category</strong> button. You can add new add category
 															from here.</li>
 														<img alt="Category"
-															src="images/Accountant/Observation_category.PNG"><br><br>
+															src="images/Accountant/Observation_category.png"><br><br>
 														<li><strong>Checkpoint</strong>: Enter a new checkpoint for this
 															observation. </li>
 														<li><strong>Add Checkpoint</strong>: then click on <strong>Add
@@ -7298,7 +7300,7 @@
 														will open up details. From here Accountant can Change
 														Observation Details.</p><br />
 													<img alt="Observation edit"
-														src="images/Accountant/Observation_edit.PNG"><br><br>
+														src="images/Accountant/Observation_edit.png"><br><br>
 													<p><strong> Delete Observation:</strong> Accountant can delete a
 														complete list of all Observation and delete detail of particular
 														Observation by clicking on delete detail button. This will
