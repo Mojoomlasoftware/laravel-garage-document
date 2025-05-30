@@ -73,7 +73,8 @@
 							<li><a class="current" href="#Introduction">Introduction</a></li>
 							<li><a href="#Installation">Installation</a></li>
 							<li><a href="#CronJobs">CronJobs</a></li>
-							<li><a href="#fronted-login">Fronted Login Page</a></li>
+							<li><a href="#frontend-login">Frontend Login Page</a></li>
+							<li><a href="#frontend-booking">Frontend Service Booking</a></li>
 							<li id="admin"
 								style="background: url(css/img/back-to-buttom.png) no-repeat scroll right center rgba(0, 0, 0, 0); padding-bottom: 6px; font-size: 13px;">
 								Admin view
@@ -82,12 +83,16 @@
 									<li>Setting
 										<ul style="display:block;">
 											<li><a href="#GeneralSetting">General Setting</a></li>
+											<li><a href="#addon">Addons Menu</a></li>
+											<li><a href="#howto">How to Videos</a></li>
 											<li><a href="#OtherSetting">Other Setting</a></li>
 											<li><a href="#AccessRight">Access Right</a></li>
 
 											<li><a href="#BusinessHours">Business Hours</a></li>
 											<li><a href="#Branch_setting">Branch Setting</a></li>
 											<li><a href="#Email_setting">Email Setting</a></li>
+											<li><a href="#Quotation_setting">Quotation Setting</a></li>
+											<li><a href="#csv_setting">CSV Import</a></li>
 										</ul>
 									</li>
 									<li>Inventory
@@ -140,6 +145,7 @@
 									<li><a href="#EmailTemplate">Email Template</a></li>
 									<li><a href="#CustomField">Custom Field</a></li>
 									<li><a href="#ObservationLibrary">Observation Library</a></li>
+									<li><a href="#Notes">Notes</a></li>
 									<li><a href="#Branch">Branch</a></li>
 								</ul>
 							</li>
@@ -154,6 +160,8 @@
 										<ul style="display:block;">
 											<li><a href="#C_OtherSetting">Other Setting</a></li>
 										</ul>
+		
+										<li><a href="#howto_c">How to Videos</a></li>
 									</li>
 									<li>Users
 										<ul style="display:block;">
@@ -186,6 +194,7 @@
 									<li>Setting
 										<ul style="display:block;">
 											<li><a href="#E_OtherSetting">Other Setting</a></li>
+											<li><a href="#howto_e">How to Videos</a></li>
 										</ul>
 									</li>
 									<li>Inventory
@@ -235,6 +244,7 @@
 									<li>Setting
 										<ul style="display:block;">
 											<li><a href="#S_OtherSetting">Other Setting</a></li>
+											<li><a href="#howto_s">How to Videos</a></li>
 										</ul>
 									</li>
 									<li>Inventory
@@ -298,6 +308,7 @@
 									<li>Setting
 										<ul style="display:block;">
 											<li><a href="#A_OtherSetting">Other Setting</a></li>
+											<li><a href="#howto_a">How to Videos</a></li>
 										</ul>
 									</li>
 									<li>Inventory
@@ -387,6 +398,7 @@
 
 
 							<section id="Installation">
+
 								<h5>1). FTP Upload</h4>
 									<ol>
 										<li>Unzip the "
@@ -427,23 +439,44 @@
 											<li>Mbstring PHP Extension</li>
 											<li>OpenSSL PHP Extension</li>
 											<li>PDO PHP Extension</li>
-											<li>pdo_mysql Driver</li>
 											<li>Tokenizer PHP Extension</li>
 											<li>XML PHP Extension</li>
-											<li>PHP mail()</li>
 											<br /><br />
+									<p>If You Want to Install Garage Master In Your Local System. Follow Below Step</p>
+									<h5>(*). Local Installation Setup - Laragon</h4>
+									<ol>
+										<li>Download Laragon from
+											<a href="https://laragon.org/download/"
+											target="_blank">Click here</a>
+										</li>
+										<li>Extract Garage.zip on laragon folder directory
+											Example : D:\laragon\www
+										</li>
+										<li>Open Laragon and Click on StartAll 
+										<br><br><img src="images/laragon1.png" style="width:80%;"/><br><br>
+										</li>
+										<li>Create New Database and give name of your database 
+										<p>Click on Database -> Rightclick on LaragonMysql->createNew->database</p>
+											<br><br>	<img src="images/laragon2.png" style="width:80%;"/><br><br>
+										</li>
+										<li>After creating database go to Menu->Apache->sites-enabled->yourfile.test.conf  
+											<br><br>	<img src="images/laragon3.png" style="width:80%;"/><br><br>
+										</li>
+										<li>Remove Public directory on this yourfile.test.conf file<br>
+											Example :  Before-> D:/laragon/www/garage/public
+											           <br>After->D:/laragon/www/garage
+											<br><br>	<img src="images/laragon4.png" style="width:80%;"/><br><br>
+										</li>
+										<li>Restart or reload laragon and open your web->menu->www->yourfilename 
+			                                Follow Installation Steps and give your created database name 
+										</li>
+										
+									</ol><br /><br />
 
 											<section>
 												<h3><strong>B) Installation:</strong></h3><br>
 
-												<h4>1)Requirements</h4><br />
-												<img src="images/Installer/Installer2.png" /><br><br>
-
-												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is fail
-												then you are not able to install this package. check all requirements
-												and click on Next Step.<br><br>
-
-												<h4>2)Purchase Information</h4><br />
+												<h4>1)Purchase Information</h4><br />
 												<img src="images/Installer/Installer1.png" /><br><br>
 
 												<ol>
@@ -452,6 +485,13 @@
 													<li><strong>E-mail : </strong>Enter your purchasekey time email.
 													</li>
 												</ol>
+
+												<h4>2)Requirements</h4><br />
+												<img src="images/Installer/Installer2.png" /><br><br>
+
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is fail
+												then you are not able to install this package. check all requirements
+												and click on Next Step.<br><br>
 
 												<h4>3)Database setup</h4><br />
 												<img src="images/Installer/Installer3.png" /><br><br>
@@ -521,7 +561,7 @@
 												<hr>
 											</section>
 											<!-- Login page -->
-											<section id="fronted-login">
+											<section id="frontend-login">
 												<h3><strong>D) Front-end Login Page:</strong></h3><br />
 												<section id="login-page-setting">
 													<p> You can now log in with admin username and password. </p><br />
@@ -531,10 +571,29 @@
 													<hr>
 												</section>
 											</section>
+
+											<!-- Frontend service booking page -->
+											<section id="frontend-booking">
+												<h3><strong>E) Front-end Service Booking:</strong></h3><br />
+												<p>Admin can enable frontend service booking from the other settings
+													tab.</p>
+												<section id="frontend-booking-page">
+													<h4>Front-end Booking Page :</h4>
+													<img alt="" src="images/frontendBook.png"><br><br>
+													<br>
+												</section>
+												<section id="book-an-appointment-page">
+													<h4>Book an Appointment :</h4>
+													<p> Users can book vehicle service from here Book an Appointment. Also when selecting any date then it will display by default the selected date </p>
+													<img alt="" src="images/service-frontendBook.png"><br><br>
+													<hr>
+												</section>
+											</section>
+
 											<!-- Admin View  -->
 											<section id="admin_view">
 												<section id="admin-dasboard">
-													<h3><strong>E) Admin View:</strong></h3><br />
+													<h3><strong>F) Admin View:</strong></h3><br />
 													<h4><strong>1)Dashboard:</strong></h4><br />
 													<p> Admin side dashboard view.</p><br />
 													<img alt="Admin View"
@@ -556,7 +615,7 @@
 															requirement.
 														</p><br />
 														<img alt="General Settings"
-															src="images/Admin/generalsetting.png">
+															src="images/generalsetting.png">
 														<br>
 														<br>
 														<ul>
@@ -585,6 +644,29 @@
 																email id for this general settings.</li>
 														</ul><br />
 												</section>
+												<section id="addon">
+													<h4><strong>2.1)Addons</strong></h3><br />
+														<h5> Addon packages & Other Softwares</h5><br />
+														<p>Click on <strong>Setting</strong> inside Click on
+															<strong>Addons</strong> to see Addons menu.In this menu provide garage addon packages and other softwares
+															system.click get it button to purchase addon packages and other softwares
+														</p><br />
+														<img alt="Addon menu"
+															src="images/garageaddonmenu.png">
+														<br>
+														<br>
+												</section>
+												<section id="howto">
+													<h4><strong>2.2)How to Videos</strong></h3><br />
+														<h5>How to Videos</h5><br />
+														<p>In this menu it provide video guidance.Click on <strong>Setting</strong> inside Click on
+															<strong>How to Videos</strong> to open this menu.
+														</p><br />
+														<img alt="how to videos"
+															src="images/howtomenu.png">
+														<br>
+														<br>
+												</section>
 												<!--  Other Settings  -->
 												<section id="OtherSetting">
 
@@ -594,7 +676,7 @@
 														advised to fill all fields of Other Settings as these details
 														are used in a different section of the whole system. You can
 														change these settings as per your requirement.</p><br />
-													<img alt="Other Settings" src="images/Admin/othersetting.png">
+													<img alt="Other Settings" src="images/othersetting.png">
 													<br>
 													<br>
 													<ul>
@@ -645,7 +727,7 @@
 														to operate this all modules.
 													</p><br />
 													<img alt="Access Right Normal Page Display"
-														src="images/Admin/Accessrights_normal_list_with_all_users_list.png">
+														src="images/accessrights.png">
 													<img alt="Access Right For Customer"
 														src="images/Admin/Accessrights_for_customer_assigned_by_Admin.png">
 													<img alt="Access Right For Employee"
@@ -691,7 +773,7 @@
 														per your requirement.
 													</p><br />
 													<img alt="Business Hours Settings"
-														src="images/Admin/BusinessHours.png">
+														src="images/businesshours.png">
 													<br>
 													<br>
 													<ul>
@@ -797,7 +879,7 @@
 													</ul>
 
 													<img alt="Branch Settings Tab"
-														src="images/Admin/branch_setting.png"><br><br>
+														src="images/branchsetting.png"><br><br>
 													<ul>
 														<h6>Select Branch Option</h6>
 														<li>Select branch name from select branch option and update this
@@ -820,7 +902,7 @@
 													</p><br />
 
 													<img alt="Branch Settings Tab"
-														src="images/Admin/branch_setting.png">
+														src="images/branchsetting.png">
 													<br><br>
 
 													<p>Here you can see <strong>Admin</strong> has currently selected
@@ -888,6 +970,65 @@
 															ssl for SSL/TLS, or null for no encryption.</li>
 													</ul><br /><br />
 												</section>
+												 <!-- Quotation Setting  -->
+												<section id="Quotation_setting">
+													<h5>G) Quotation Settings</h5><br />
+													<p>Click on <strong>Setting</strong> within <strong>Quotation Setting
+														</strong> to start setting up the system. To configure your
+														Quotation settings. You can Add your Terms and Condition here and submit it.Then
+														it will shows in Invoice and Quotation
+									
+													</p>
+													<br />
+													<img alt="Business Hours Settings"
+														src="images/quotationsetting.png">
+													<br>
+													<br>
+												</section>
+												 <!-- CSV Import Setting  -->
+												 <section id="csv_setting">
+													<h5>H) CSV Import</h5><br />
+													<p>Click on <strong>Setting</strong> within <strong> CSV Import
+														</strong> to start importing csv data you can follow these steps.
+													</p>
+													<h4>Step1 : User Import</h4>
+													<ul>
+														<li>Select User in given dropdown and click select button</li>
+														<li>You can see user import popup box click download sample csv file</li>
+														<li>You can add your users data in downloaded csv files and Save it.</li>
+														<li>After saved you can upload this file in popup</li>
+													</ul>
+													<p>Note: Do not Change column name in csv file.Also in role column you can user number like 1,2,3,4</p>
+													
+													<br>
+													<img alt="Csv sample file"
+														src="images/samplecsv.png">
+													<br>
+													<br>
+													<h4>Step2 : Vehicles Import</h4>
+													<ul>
+														<li>Select Vehicle in given dropdown and click select button</li>
+														<li>You can see vehicle import popup box click download sample csv file</li>
+														<li>You can add your vehicles data in downloaded csv files and Save it.</li>
+														<li>After saved you can upload this file in popup</li>
+													</ul>
+													
+													<img alt="Csv sample file"
+														src="images/samplecsvvehicle.png">
+													<br><br><br>
+													<img alt="Csv import setting"
+														src="images/csvimportsetting.png">
+													<br>
+													<br>
+													<img alt="Csv User import"
+														src="images/userimport.png">
+													<br>
+													<br>
+													<img alt="Csv vehicle import"
+														src="images/vehicleimportlatest.png">
+													<br>
+													<br>
+												</section>
 											</section>
 
 											<!--  Inventory  -->
@@ -902,7 +1043,7 @@
 															Supplier.</p><br />
 
 														<img alt="Supplier"
-															src="images/Admin/supplier_list.png"><br><br>
+															src="images/Admin/updated_supplierlist.png"><br><br>
 
 
 														<p><strong>Add Supplier:</strong> Admin can add supplier
@@ -943,6 +1084,8 @@
 															<li>Add new custom field in go to custom Fields module in
 																add custom field then select form name in supplier and
 																add custom field for this supplier.</li>
+															<h6>Notes</h6>
+															<li>Add notes in supplier.</li>
 														</ul>
 														<p><strong>Edit Supplier:</strong> Admin can Edit detail of
 															particular Supplier by clicking on Edit detail button. This
@@ -955,7 +1098,12 @@
 															by clicking on view detail button. This will open up
 															details.</p><br />
 														<img alt="Supplier"
-															src="images/Admin/supplier_view.png"><br><br>
+															src="images/Admin/supplier_view.png"><br><br><br>
+														
+														<p><strong> View Notes:</strong> View notes in supplier
+															</p><br />
+														<img alt="Supplier_View_Notes" src="images/Admin/view_notes.png"><br><br><br>
+														
 														<p><strong> Delete Supplier:</strong> Admin can delete a
 															complete list of all Supplier and delete detail of
 															particular Supplier by clicking on delete detail button.
@@ -968,7 +1116,7 @@
 													<p><strong>Product List:</strong> Admin can add new Product and
 														manage all types of Product as well as view a complete list of
 														all Product.</p><br />
-													<img alt="Product List" src="images/Admin/product_list.png"><br><br>
+													<img alt="Product List" src="images/Admin/updated_productlist.png"><br><br>
 													<p><strong>Add Product:</strong> Admin can add product details</p>
 													<br />
 													<img alt="Product Type" src="images/Admin/product_add.png"><br><br>
@@ -988,6 +1136,9 @@
 															is not available in a list then click on <strong>Add Or
 																Remove</strong> button. You can add new manufacturer
 															name from here.</li>
+															
+														<li><strong>Notes</strong>: Add notes for product</li>
+
 														<img alt="Brand"
 															src="images/Admin/product_add_type.png"><br><br>
 
@@ -1021,6 +1172,13 @@
 														open up details. From here admin can Change Product Details.</p>
 													<br />
 													<img alt="Product Type" src="images/Admin/product_edit.png"><br><br>
+
+													<p><strong>View Product:</strong> Admin can View detail of
+														particular Product by clicking on View detail button. This will
+														open up details. From here admin can View Product Details.</p>
+													<br />
+													<img alt="Product Type" src="images/Admin/product_view.png"><br><br>
+
 													<p><strong> Delete Product:</strong> Admin can delete a complete
 														list of all Product and delete detail of particular Product by
 														clicking on delete detail button. This will delete details.</p>
@@ -1065,6 +1223,8 @@
 															and auto generated amount.</li>
 														<li><strong>Action</strong>: Delete product for this purchase
 														</li>
+														<h6>Notes</h6>
+														<li> Add notes for Purchase</li>
 													</ul>
 
 													<p><strong>View Purchase:</strong> Admin can view detail of
@@ -1092,7 +1252,7 @@
 														particular Stock by clicking on view detail button. This will
 														open up details. From here admin can also Print Out view Stock.
 													</p><br />
-													<img alt="Stock" src="images/Admin/Stoke_list.png"><br><br>
+													<img alt="Stock" src="images/Admin/updated_stocklist.png"><br><br>
 													<p><strong>Add Stock:</strong> You can add Stock details.</p><br />
 													<img alt="Purchase" src="images/Admin/Purchase_add.png"><br><br>
 													<ul>
@@ -1149,7 +1309,7 @@
 															Customer.</p><br />
 
 														<img alt="Customer"
-															src="images/Admin/Customer_list.png"><br><br>
+															src="images/Admin/updatedcustomerlist.png"><br><br>
 
 
 														<p><strong>Add Customer:</strong> Admin can add Customer
@@ -1192,6 +1352,8 @@
 															<li>Add new custom field in go to custom Fields module in
 																add custom field then select form name in customer and
 																add custom field for this customer.</li>
+															<h6>Notes</h6>
+															<li>Add notes for Customer.</li>
 														</ul>
 														<p><strong>Edit Customer:</strong> Admin can Edit detail of
 															particular customer by clicking on Edit detail button. This
@@ -1218,7 +1380,7 @@
 														manage all Employee and view a complete list of all Employee.
 													</p><br />
 
-													<img alt="Employee" src="images/Admin/Employee_list.png"><br><br>
+													<img alt="Employee" src="images/Admin/updated_employeelist.png"><br><br>
 
 
 													<p><strong>Add Employee:</strong> Admin can add Employee details.
@@ -1290,7 +1452,7 @@
 														of all Support Staff.</p><br />
 
 													<img alt="SupportStaff"
-														src="images/Admin/SupportStaff_list.png"><br><br>
+														src="images/Admin/updated_supportstafflist.png"><br><br>
 
 
 													<p><strong>Add SupportStaff:</strong> Admin can add SupportStaff
@@ -1357,7 +1519,7 @@
 														accountant.</p><br />
 
 													<img alt="accountant"
-														src="images/Admin/Accountant_list.png"><br><br>
+														src="images/Admin/updated_accountantlist.png"><br><br>
 
 
 													<p><strong>Add Accountant:</strong> Admin can add accountant
@@ -1423,7 +1585,7 @@
 														admins.</p><br />
 
 													<img alt="branch_admin"
-														src="images/Admin/branch_admin_list.png"><br><br>
+														src="images/Admin/updated_branchadminlist.png"><br><br>
 
 
 													<p><strong>Add Branch Admin:</strong> Admin can add branch admin
@@ -1495,7 +1657,7 @@
 															manage all Vehicle of Vehicle as well as view a complete
 															list of all Vehicle.</p><br />
 														<img alt="Vehicle List"
-															src="images/Admin/Vehicle_list.png"><br><br>
+															src="images/Admin/updated_vehiclelist.png"><br><br>
 														<p><strong>Add Vehicle:</strong> Admin can add Vehicle details
 														</p><br />
 														<img alt="Vehicle" src="images/Admin/Vehicle_add.png"><br><br>
@@ -1682,12 +1844,14 @@
 															manage all Service and view a complete list of all Service.
 														</p><br />
 														<img alt="Service List"
-															src="images/Admin/Service_list.png"><br><br>
+															src="images/Admin/updated_servicelist.png"><br><br>
 														<p><strong>Add Service:</strong> Admin can add Service details
 														</p><br />
 														<!-- <img alt="Service" src="images/Admin/Service_add.png"><br><br> -->
-														<img alt="Service"
-															src="images/Admin/Add_Service_with_MOT_Testing.png"><br><br>
+														<!-- <img alt="Service"
+															src="images/Admin/Add_Service_with_MOT_Testing.png"> -->
+															<img alt="Service"
+															src="images/SupportStaff/addservicenew.png"><br><br>
 														<ul>
 															<h6>Step-1: Add Service Details.</h6>
 															<li><strong>Jobcard Number</strong>: Job card number auto
@@ -1716,13 +1880,19 @@
 																service charge for this service.</li>
 															<li><strong>Registration number</strong>: Enter a new
 																registration number for this service.</li>
+															<li><strong>Car Damage Marker</strong>: You can Mark the damage area in given car and add damage 
+																details in Add Pre-Inspection Checklist box.</li>
 															<li><strong>MOT Test</strong>: Tick this check box for
 																vehicle MOT testing.</li>
 
 															<h6>Step-2: Add Job card Details.</h6><br>
 															<!-- <img alt="Service" src="images/Admin/Service_add2.png"><br><br> -->
+															<!-- <img alt="Service"
+																src="images/Admin/Add_Service_with_MOT_Testing_second_step.png"> -->
+																<img alt="Service"
+															src="images/SupportStaff/addjobcard.png"><br><br>
 															<img alt="Service"
-																src="images/Admin/Add_Service_with_MOT_Testing_second_step.png"><br><br>
+															src="images/SupportStaff/selectobs.png"><br><br>
 															<li><strong>Job card Number</strong>: Job card number auto
 																fields.</li>
 															<li><strong>In Date/Time</strong>: In date/time auto fields.
@@ -1749,8 +1919,8 @@
 															<li><strong>Color</strong>: Color auto fields.</li>
 
 															<h6>Observation List</h6>
-															<li><strong>Add New</strong>: Add New observation point for
-																this service.</li>
+															<li><strong>Add New</strong>: Select and Add New observation point for
+																this service in given dropdown.</li>
 															<li><strong>Observation Point</strong>: List of the
 																observation point.</li>
 
@@ -1768,8 +1938,10 @@
 															will open up details. From here admin can Change Service
 															Details.</p><br />
 														<!-- <img alt="Service" src="images/Admin/Service_edit.png"><br><br> -->
-														<img alt="Service"
-															src="images/Admin/Edit_Service_with_Mot_testing.png"><br><br>
+														<!-- <img alt="Service"
+															src="images/Admin/Edit_Service_with_Mot_testing.png"> -->
+															<img alt="Service"
+															src="images/SupportStaff/editservice.png"><br><br>
 														<p><strong> View Service:</strong> Admin can view a complete
 															list of all Service and view detail of particular Service by
 															clicking on view detail button. This will open up details.
@@ -1821,14 +1993,14 @@
 													<p><strong>Invoice List:</strong> Admin can add a new invoice,
 														invoice all invoice and view a complete list of all invoice.</p>
 													<br />
-													<img alt="invoice List" src="images/Admin/Invoice_list.png"><br><br>
+													<img alt="invoice List" src="images/Admin/updated_invoicelist.png"><br><br>
 													<p><strong>Sold Part Invoice List:</strong> Admin can add a new sold
 														part invoice,
 														edit sold part invoice and view a complete list of all sold part
 														invoice.</p>
 													<br />
 													<img alt="invoice List"
-														src="images/Admin/Sold_Part_Invoice_list.png"><br><br>
+														src="images/Admin/updated_soldpartinvoicelist.png"><br><br>
 													<p><strong>Add Invoice:</strong> Admin can add invoice details</p>
 													<br />
 													<img alt="invoice add" src="images/Admin/Invoice_add.png"><br><br>
@@ -1924,11 +2096,11 @@
 															manage all job card and view a complete list of all job card
 														</p><br />
 														<img alt="job card List"
-															src="images/Admin/Jobcard_list.png"><br><br>
+															src="images/Admin/updated_jobcardlist.png"><br><br>
 														<p><strong>Add job card:</strong> Admin can add job card details
 														</p><br />
 														<img alt="job card add"
-															src="images/Admin/Service_add.png"><br><br>
+															src="images/Admin/updated_addservice.png"><br><br>
 														<h6>Step-1: Add Service Details.</h6>
 														<ul>
 															<li><strong>Job card Number</strong>: Job card number auto
@@ -1952,6 +2124,10 @@
 																this service.</li>
 															<li><strong>Details</strong>: Enter a new details for this
 																service.</li>
+															<li><strong>Car Damage marker</strong>: Add car damage marker in given car image 
+														    </li>
+															<li><strong>Add Pre-inspection checklist</strong>: Based on damage marker you can add details in this box 
+														    </li>
 															<li><strong>Fix Service Charge</strong>: Enter a new fix
 																service charge for this service.</li>
 															<li><strong>Registration number</strong>: Enter a new
@@ -1959,7 +2135,7 @@
 
 															<h6>Step-2: Add Job card Details.</h6><br>
 															<img alt="job card add"
-																src="images/Admin/Jobcard_add2.png"><br><br>
+																src="images/Admin/updated_jobcardlist.png"><br><br>
 															<li><strong>Job card Number</strong>: Job card number auto
 																fields.</li>
 															<li><strong>In Date/Time</strong>: In date/time auto fields.
@@ -1985,10 +2161,9 @@
 																fields.</li>
 															<li><strong>Color</strong>: Color auto fields.</li>
 															<h6>Observation List</h6>
-															<li><strong>Add New</strong>: Add New observation point for
-																this service.</li>
-															<li><strong>Observation Point</strong>: List of the
-																observation point.</li>
+															<li><strong>Add New</strong>: Select and Add New observation point for
+																this service in given dropdown.</li>
+															<li><strong>Observation Point</strong>: After selecting points it listed in this part</li>
 														</ul>
 
 
@@ -2299,7 +2474,7 @@
 													<p><strong>Monthly Income:</strong> Admin can View Monthly Income
 														details.</p><br />
 													<img alt="Income Monthly"
-														src="images/Admin/Income_Monthly.png"><br><br>
+														src="images/Admin/updated_monthlyincomerepo.png"><br><br>
 													<ul>
 														<h6>Income Details</h6>
 														<li><strong>start Date</strong>: Enter a new start date for this
@@ -2533,7 +2708,7 @@
 													<h5>A)Service Report </h5><br />
 													<p>You can start date and end date of view Service report.</p><br />
 													<img alt="Service report"
-														src="images/Admin/Report_service.png"><br><br>
+														src="images/Admin/updated_servicereport.png"><br><br>
 													<ul>
 														<li><strong>Start Date</strong>: Enter a new start date for this
 															service report.</li>
@@ -2544,12 +2719,13 @@
 													</ul><br />
 													<p>When clicking on GO button. This will open Start Date and End
 														date Between In Service Report and Service list.</p>
+													<p>You can easily download pdf and print these report.</p><br>
 
 													<h5>B)Product Stock </h5><br />
 													<p>You can Manufacturer Name and Product Name of view Product stock
 														report.</p><br />
 													<img alt="Product report"
-														src="images/Admin/Report_product.png"><br><br>
+														src="images/Admin/updated_productreport.png"><br><br>
 													<ul>
 														<li><strong>Select Manufacturer Name</strong>: Select
 															manufacturer name for this product stock.</li>
@@ -2558,12 +2734,13 @@
 													</ul><br />
 													<p>When clicking on GO button. This will open In Product stock list.
 													</p>
+													<p>You can easily download pdf and print these report.</p><br/>
 
 													<h5>C)Product Usage </h5><br />
 													<p>You can start date and end date of view Product Usage report.</p>
 													<br />
 													<img alt="Product report"
-														src="images/Admin/Report_productusage.png"><br><br>
+														src="images/Admin/updated_productusagereport.png"><br><br>
 													<ul>
 														<li><strong>Start Date</strong>: Enter a new start date for this
 															product usage report.</li>
@@ -2580,14 +2757,13 @@
 														complete list of all Product Usage and view detail of particular
 														Product Usage by clicking on view detail button. This will open
 														up details.</p><br />
-													<img alt="invoice view"
-														src="images/Admin/Report_productusage.png"><br><br>
+													<p>You can easily download pdf and print these report.</p><br/>
 
 													<h5>D)Employee Service Report </h5><br />
 													<p>You can start date and end date of view Employee Service report.
 													</p><br />
 													<img alt="Employee report"
-														src="images/Admin/Report_empservice.png"><br><br>
+														src="images/Admin/updated_empservicereport.png"><br><br>
 													<ul>
 														<li><strong>Start Date</strong>: Enter a new start date for this
 															employee service report.</li>
@@ -2598,7 +2774,39 @@
 													</ul><br />
 													<p>When clicking on GO button. This will open Start Date and End
 														date Between In Employee service Report and employee service
+														list.</p><br/>
+
+													<h5>E)Upcoming Service Report </h5><br />
+													<p>You can start date and end date of view Upcoming Service report.
+													</p><br />
+													<img alt="Upcoming Service report"
+														src="images/Admin/upcomingservice_report.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															upcoming service report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															upcoming service report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Upcoming service Report and Upcoming service
 														list.</p>
+													<p>You can easily download pdf and print these report.</p>
+													<br>
+													<h5>F)Email Sent Report </h5><br />
+													<p>You can start date and end date of the view Email Sent report.
+													</p><br />
+													<img alt="Email Sent report"
+														src="images/Admin/emailreport.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															Email Sent report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															Email sent report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Email Sent Report and Email sent report
+														list.</p>
+													<p>You can easily download pdf and print these report.</p>
 											</section>
 											<!-- Email Template   -->
 											<section id="EmailTemplate">
@@ -2652,6 +2860,11 @@
 														Observation.</p><br />
 													<img alt="Observation list"
 														src="images/Admin/Observation_list.png"><br><br>
+													
+													<p><strong>Observation Libraries Information:</strong> Some Observation Libraries are Added by default. </p><br />
+													<img alt="Observation list"
+														src="images/Admin/observation-list-info.png"><br><br>
+
 													<p><strong>Add Observation:</strong> Admin can add Observation
 														details</p><br />
 													<img alt="Observation add"
@@ -2684,9 +2897,27 @@
 														delete details.</p><br />
 											</section>
 
+											<!-- Notes Start -->
+											<section id="Notes">
+												<h4><strong>17)Notes</strong></h3><br />
+												<h5>Notes Module</h5><br />
+												<p><strong>Notes List:</strong> You can check All module notes here </p><br />
+												<img alt="Notes list"
+													src="images/Notes/notes-list.png"><br><br>
+												
+												<p><strong>View Notes List:</strong> You can view note details here </p><br />
+													<img alt="Notes list"
+														src="images/Notes/view-notes-list.png"><br><br>
+												
+												<p><strong>Delete Notes:</strong> Admin can delete a complete list of all Notes and delete detail of particular Notes by clicking on delete button. This will delete particular Notes all the details. </p><br />
+											</section>
+
+											<!-- Notes End -->
+
+
 											<!-- Branch Start  -->
 											<section id="Branch">
-												<h4><strong>17)Branch</strong></h3><br />
+												<h4><strong>18)Branch</strong></h3><br />
 													<h5>Branch Module</h5><br />
 													<p><strong><span class="text-danger"
 																style="color: red;">*</span>Note:</strong> When the
@@ -2791,6 +3022,17 @@
 
 														</ul><br />
 												</section>
+												<section id="howto_c">
+													<h4><strong>2.1)How to Videos</strong></h3><br />
+														<h5>How to Videos</h5><br />
+														<p>In this menu it provide video guidance.Click on <strong>Setting</strong> inside Click on
+															<strong>How to Videos</strong> to open this menu.
+														</p><br />
+														<img alt="how to videos"
+															src="images/howtomenu.png">
+														<br>
+														<br>
+												</section>
 											</section>
 
 											<!--  Users   -->
@@ -2874,7 +3116,7 @@
 														<p><strong>Vehicle List:</strong> Customer can see a list of the
 															vehicle.</p><br />
 														<img alt="Vehicle List"
-															src="images/Customer/Vehicle_list.png"><br><br>
+															src="images/Customer/customerside_vehicallist.png"><br><br>
 
 
 														<p><strong> View Vehicle:</strong> Customer can only show own
@@ -2895,29 +3137,21 @@
 														<p><strong>Service List:</strong> Customer can see the only list
 															of Service.</p><br />
 														<img alt="Service List"
-															src="images/Customer/Service_list.png"><br><br>
+															src="images/Customer/service_list_updated.png"><br><br>
 
 														<p><strong> View Service:</strong> Customer can view only
 															Service details.</p><br />
 														<img alt="Service"
-															src="images/Customer/Service_view.png"><br><br>
+															src="images/Customer/Service_view.png"><br>
+
+														<p><strong> View Service:</strong> Customer can Book service in Dashboard
+														       </p><br />
+														<img alt="Service"
+																src="images/Customer/customerdashboard.png"><br>
+														<img alt="Service"
+																src="images/Customer/customerbookservice.png"><br><br>
 
 												</section>
-											</section>
-
-											<!-- customer side Quotation   -->
-											<section id="C_Quotation">
-												<h4><strong>9)Quotation</strong></h3><br />
-													<h5>Quotation </h5><br />
-													<p><strong>List Quotation:</strong> Customer can see the only list
-														of Quotation.</p><br />
-													<img alt="Quotation List"
-														src="images/Admin/quotation_list.png"><br><br>
-
-													<p><strong> View Quotation:</strong> Customer can view only
-														Quotation details.</p><br />
-													<img alt="Quotation View"
-														src="images/Customer/quotation_view.png"><br><br><br>
 											</section>
 
 
@@ -2929,7 +3163,7 @@
 													<p><strong>Invoice List:</strong> Customer can see the only list of
 														invoice.</p><br />
 													<img alt="invoice List"
-														src="images/Customer/Invoice_list.png"><br><br>
+														src="images/Customer/customerinvoicelist.png"><br><br>
 
 													<p><strong> View invoice:</strong> Customer can view only invoice
 														details.From here Customer can also Print Out view invoice.</p>
@@ -2956,7 +3190,7 @@
 														<p><strong>Job card List:</strong> Customer can see the only
 															list of job card</p><br />
 														<img alt="job card List"
-															src="images/Customer/Jobcard_list.png"><br><br>
+															src="images/Customer/jobcard_list_updated.png"><br><br>
 
 														<p><strong> View invoice:</strong> Customer can view only
 															invoice details.From here Customer can also Print Out view
@@ -2994,6 +3228,21 @@
 														details.</p><br />
 													<img alt="Invoice List"
 														src="images/Customer/Sales_view.png"><br><br><br>
+											</section>
+
+                                            <!-- customer side Quotation   -->
+											<section id="C_Quotation">
+												<h4><strong>9)Quotation</strong></h3><br />
+													<h5>Quotation </h5><br />
+													<p><strong>List Quotation:</strong> Customer can see the only list
+														of Quotation.</p><br />
+													<img alt="Quotation List"
+														src="images/Admin/quotation_list.png"><br><br>
+
+													<p><strong> View Quotation:</strong> Customer can view only
+														Quotation details.</p><br />
+													<img alt="Quotation View"
+														src="images/Customer/quotation_view.png"><br><br><br>
 											</section>
 
 											<!-- Employee_view -->
@@ -3035,6 +3284,17 @@
 
 														</ul><br />
 												</section>
+												<section id="howto_e">
+													<h4><strong>2.1)How to Videos</strong></h3><br />
+														<h5>How to Videos</h5><br />
+														<p>In this menu it provide video guidance.Click on <strong>Setting</strong> inside Click on
+															<strong>How to Videos</strong> to open this menu.
+														</p><br />
+														<img alt="how to videos"
+															src="images/howtomenu.png">
+														<br>
+														<br>
+												</section>
 											</section>
 
 											<!--  Inventory  -->
@@ -3049,7 +3309,7 @@
 															all Supplier.</p><br />
 
 														<img alt="Supplier"
-															src="images/Employee/Supplier_list.png"><br><br>
+															src="images/Employee/updated_supplierlist.png"><br><br>
 
 
 														<p><strong>Add Supplier:</strong> Employee can add supplier
@@ -3091,7 +3351,8 @@
 															<li>Add new custom field in go to custom Fields module in
 																add custom field then select form name in supplier and
 																add custom field for this supplier.</li>
-
+															<h6>Notes</h6>
+															<li>Add notes in supplier.</li>
 														</ul>
 														<p><strong>Edit Supplier:</strong> Employee can Edit detail of
 															particular Supplier by clicking on Edit detail button. This
@@ -3118,7 +3379,7 @@
 														manage all types of Product as well as view a complete list of
 														all Product.</p><br />
 													<img alt="Product List"
-														src="images/Employee/Product_list.png"><br><br>
+														src="images/Employee/updated_supplierlist.png"><br><br>
 													<p><strong>Add Product:</strong> Employee can add product details
 													</p><br />
 													<img alt="Product Type"
@@ -3218,6 +3479,8 @@
 															auto generated amount.</li>
 														<li><strong>Action</strong>: Delete product for this purchase
 														</li>
+														<h6>Notes</h6>
+														<li>Add notes in Purchase.</li>
 													</ul>
 
 													<p><strong>View Purchase:</strong> Employee can view detail of
@@ -3245,7 +3508,7 @@
 														of particular stock by clicking on view detail button. This will
 														open up details. From here Employee can also Print Out view
 														Stock.</p><br />
-													<img alt="Stock" src="images/Employee/Stoke_list.png"><br><br>
+													<img alt="Stock" src="images/Employee/updated_stocklist.png"><br><br>
 													<p><strong>Add Stock:</strong> You can add stock details.</p><br />
 													<img alt="Purchase" src="images/Employee/Purchase_add.png"><br><br>
 													<ul>
@@ -3302,7 +3565,7 @@
 															Customer.</p><br />
 
 														<img alt="Customer"
-															src="images/Employee/Customer_list.png"><br><br>
+															src="images/Employee/updatedcustomerlist.png"><br><br>
 
 														<p><strong> View Customer:</strong> Employee can see view
 															Customer details.</p><br />
@@ -3317,7 +3580,7 @@
 													<p><strong>Employee List:</strong> Employee can see a list of all
 														Employee.</p><br />
 
-													<img alt="Employee" src="images/Employee/Employee_list.png"><br><br>
+													<img alt="Employee" src="images/Employee/updated_employeelist.png"><br><br>
 													<p><strong>Edit Employee:</strong> Employee can see the only Edit
 														detail button. This will open up details. From here Employee can
 														Change Employee Details.</p></br />
@@ -3335,7 +3598,7 @@
 													<p><strong>SupportStaff List:</strong> Employee can see a list of
 														all Support Staff.</p><br />
 													<img alt="SupportStaff"
-														src="images/Employee/SupportStaff_list.png"><br><br>
+														src="images/Employee/updated_supportstafflist.png"><br><br>
 
 													<p><strong> View SupportStaff:</strong> Employee can see view
 														Support Staff details.</p><br />
@@ -3351,7 +3614,7 @@
 														accountant.</p><br />
 
 													<img alt="accountant"
-														src="images/Employee/Accountant_list.png"><br><br>
+														src="images/Employee/updated_accountantlist.png"><br><br>
 
 													<p><strong> View Accountant:</strong> Employee can see view
 														Accountant details</p><br />
@@ -3370,7 +3633,7 @@
 														<p><strong>Vehicle List:</strong> Employee can see a list of the
 															vehicle.</p><br />
 														<img alt="Vehicle List"
-															src="images/Employee/Vehicle_list.png"><br><br>
+															src="images/Employee/updated_vehiclelist.png"><br><br>
 														<p><strong>Add Vehicle:</strong> Employee can add Vehicle
 															details</p><br />
 														<img alt="Vehicle"
@@ -3563,7 +3826,7 @@
 														<p><strong>Service List:</strong> Employee can see the only list
 															of Service.</p><br />
 														<img alt="Service List"
-															src="images/Employee/Service_list.png"><br><br>
+															src="images/Employee/updated_servicelist.png"><br><br>
 
 														<p><strong> View Service:</strong> Employee can view only
 															Service details.</p><br />
@@ -3605,7 +3868,7 @@
 													<p><strong>Invoice List:</strong> Employee can see the only list of
 														invoice.</p><br />
 													<img alt="invoice List"
-														src="images/Employee/invoice_list.png"><br><br>
+														src="images/Employee/updated_invoicelist.png"><br><br>
 
 													<p><strong> View invoice:</strong> Employee can view only invoice
 														details.From here Employee can also Print Out view invoice.</p>
@@ -3624,7 +3887,7 @@
 														<p><strong>Job card List:</strong> Employee can see the only
 															list of job card</p><br />
 														<img alt="job card List"
-															src="images/Employee/jobcard_list.png"><br><br>
+															src="images/Employee/updated_jobcardlist.png"><br><br>
 
 														<p><strong>Process Job:</strong> Employee can add and edit
 															Process job detail of particular job card by clicking on
@@ -3772,6 +4035,18 @@
 
 														</ul><br />
 												</section>
+
+												<section id="howto_s">
+													<h4><strong>2.1)How to Videos</strong></h3><br />
+														<h5>How to Videos</h5><br />
+														<p>In this menu it provide video guidance.Click on <strong>Setting</strong> inside Click on
+															<strong>How to Videos</strong> to open this menu.
+														</p><br />
+														<img alt="how to videos"
+															src="images/howtomenu.png">
+														<br>
+														<br>
+												</section>
 											</section>
 
 											<!--  Inventory  -->
@@ -3786,7 +4061,7 @@
 															all Supplier.</p><br />
 
 														<img alt="Supplier"
-															src="images/SupportStaff/supplier_list.png"><br><br>
+															src="images/SupportStaff/updated_supplierlist.png"><br><br>
 
 
 														<p><strong>Add Supplier:</strong> Support Staff can add supplier
@@ -3855,7 +4130,7 @@
 														and manage all types of Product as well as view a complete list
 														of all Product.</p><br />
 													<img alt="Product List"
-														src="images/SupportStaff/product_list.png"><br><br>
+														src="images/SupportStaff/updated_productlist.png"><br><br>
 													<p><strong>Add Product:</strong> Support Staff can add product
 														details</p><br />
 													<img alt="Product Type"
@@ -3984,7 +4259,7 @@
 														detail of particular stock by clicking on view detail button.
 														This will open up details. From here Support Staff can also
 														Print Out view Stock.</p><br />
-													<img alt="Stock" src="images/SupportStaff/Stoke_list.png"><br><br>
+													<img alt="Stock" src="images/SupportStaff/updated_stocklist.png"><br><br>
 													<p><strong>Add stock:</strong> You can add stock details.</p><br />
 													<img alt="Purchase"
 														src="images/SupportStaff/Purchase_add.png"><br><br>
@@ -4043,7 +4318,7 @@
 															all Customer.</p><br />
 
 														<img alt="Customer"
-															src="images/SupportStaff/Customer_list.png"><br><br>
+															src="images/SupportStaff/updatedcustomerlist.png"><br><br>
 
 
 														<p><strong>Add Customer:</strong> Support Staff can add Customer
@@ -4114,7 +4389,7 @@
 														Employee.</p><br />
 
 													<img alt="Employee"
-														src="images/SupportStaff/Employee_list.png"><br><br>
+														src="images/SupportStaff/updated_employeelist.png"><br><br>
 
 
 													<p><strong>Add Employee:</strong> Support Staff can add Employee
@@ -4188,7 +4463,7 @@
 														of all Support Staff.</p><br />
 
 													<img alt="SupportStaff"
-														src="images/SupportStaff/SupportStaff_list.png"><br><br>
+														src="images/SupportStaff/updated_supportstafflist.png"><br><br>
 
 
 													<p><strong>Add SupportStaff:</strong> Support Staff can add
@@ -4255,7 +4530,7 @@
 														all accountant.</p><br />
 
 													<img alt="accountant"
-														src="images/SupportStaff/Accountant_list.png"><br><br>
+														src="images/SupportStaff/updated_accountantlist.png"><br><br>
 
 
 													<p><strong>Add Accountant:</strong> Support Staff can add accountant
@@ -4325,7 +4600,7 @@
 															Vehicle and manage all Vehicle of Vehicle as well as view a
 															complete list of all Vehicle.</p><br />
 														<img alt="Vehicle List"
-															src="images/SupportStaff/Vehicle_list.png"><br><br>
+															src="images/SupportStaff/updated_vehiclelist.png"><br><br>
 														<p><strong>Add Vehicle:</strong> Support Staff can add Vehicle
 															details</p><br />
 														<img alt="Vehicle"
@@ -4521,12 +4796,12 @@
 															Service, manage all Service and view a complete list of all
 															Service.</p><br />
 														<img alt="Service List"
-															src="images/SupportStaff/Service_list.png"><br><br>
+															src="images/SupportStaff/updated_servicelist.png"><br><br>
 														<p><strong>Add Service:</strong> Support Staff can add Service
 															details</p><br />
 														<!-- <img alt="Service" src="images/SupportStaff/Service_add.png"><br><br> -->
 														<img alt="Service"
-															src="images/SupportStaff/Add_service_with_mot_by_support_staff.png"><br><br>
+															src="images/SupportStaff/updated_addservice.png"><br><br>
 														<ul>
 															<h6>Step-1: Add Service Details.</h6>
 															<li><strong>Jobcard Number</strong>: Job card number auto
@@ -4554,13 +4829,15 @@
 																service charge for this service.</li>
 															<li><strong>Registration number</strong>: Enter a new
 																registration number for this service.</li>
+															<li><strong>Car Damage Marker</strong>: Add Car damage marker in given image</li>
+															<li><strong>Pre-Inspection checklist</strong>: Add Pre-Inspection checklist details based on damage marker</li>
 															<li><strong>MOT Test</strong>: Tick this check box for
 																vehicle MOT testing.</li>
 
 															<h6>Step-2: Add Job card Details.</h6><br>
 															<!-- <img alt="Service" src="images/SupportStaff/Service_add2.png"><br><br> -->
 															<img alt="Service"
-																src="images/SupportStaff/Add_Service_with_mot_second_step_by_supportstaff.png"><br><br>
+																src="images/SupportStaff/updated_jobcardlist.png"><br><br>
 															<li><strong>Job card Number</strong>: Job card number auto
 																fields.</li>
 															<li><strong>In Date/Time</strong>: In date/time auto fields.
@@ -4586,10 +4863,9 @@
 																fields.</li>
 															<li><strong>Color</strong>: Color auto fields.</li>
 															<h6>Observation List</h6>
-															<li><strong>Add New</strong>: Add new observation point for
-																this jobcard.</li>
-															<li><strong>Observation Point</strong>: List of the
-																observation point.</li>
+															<li><strong>Add New</strong>:Select and  Add new observation point for
+																this jobcard in given dropdown.</li>
+															<li><strong>Observation Point</strong>:Selected observation points</li>
 
 															<h6>MOT Test</h6>
 															<li><strong>MOT Test View</strong>: Show details for MOT
@@ -4606,7 +4882,7 @@
 															Change Service Details.</p><br />
 														<!-- <img alt="Service" src="images/SupportStaff/Service_edit.png"><br><br> -->
 														<img alt="Service"
-															src="images/SupportStaff/edit_service_with_MOT_by_Supportstaff.png"><br><br>
+															src="images/SupportStaff/editservice.png"><br><br>
 														<p><strong> View Service:</strong> Support Staff can view a
 															complete list of all Service and view detail of particular
 															Service by clicking on view detail button. This will open up
@@ -4653,7 +4929,7 @@
 														invoice, invoice all invoice and view a complete list of all
 														invoice.</p><br />
 													<img alt="invoice List"
-														src="images/SupportStaff/invoice_list.png"><br><br>
+														src="images/SupportStaff/updated_invoicelist.png"><br><br>
 													<p><strong>Add Invoice:</strong> Support Staff can add invoice
 														details</p><br />
 													<img alt="invoice add"
@@ -4754,11 +5030,11 @@
 															card, manage all job card and view a complete list of all
 															job card</p><br />
 														<img alt="job card List"
-															src="images/SupportStaff/jobcard_list.png"><br><br>
+															src="images/SupportStaff/updated_jobcardlist.png"><br><br>
 														<p><strong>Add job card:</strong> Support Staff can add job card
 															details</p><br />
 														<img alt="job card add"
-															src="images/SupportStaff/Service_add.png"><br><br>
+															src="images/SupportStaff/updated_addservice.png"><br><br>
 														<h6>Step-1: Add Service Details.</h6>
 														<ul>
 															<li><strong>Job card Number</strong>: Job card number auto
@@ -4786,10 +5062,12 @@
 																service charge for this service.</li>
 															<li><strong>Registration number</strong>: Enter a new
 																registration number for this service.</li>
+															<li><strong>Car Damage Marker</strong>: Add car damage marker on given image.</li>
+															<li><strong>Pre-Inspection Checklist</strong>: Add Pre-Inspection checklist points based on damage marker</li>
 
 															<h6>Step-2: Add Job card Details.</h6><br>
 															<img alt="Service"
-																src="images/SupportStaff/Service_add2.png"><br><br>
+																src="images/SupportStaff/updated_jobcardlist.png"><br><br>
 															<li><strong>Job card Number</strong>: Job card number auto
 																fields.</li>
 															<li><strong>In Date/Time</strong>: In date/time auto fields.
@@ -4817,10 +5095,9 @@
 															<li><strong>AssignTo</strong>: Select assign to for this
 																service.</li>
 															<h6>Observation List</h6>
-															<li><strong>Add New</strong>: Add new observation point for
-																this service.</li>
-															<li><strong>Observation Point</strong>: List of the
-																observation point.</li>
+															<li><strong>Add New</strong>: Select and Add new observation point for
+																this service in given dropdown.</li>
+															<li><strong>Observation Point</strong>: Selected observation point L</li>
 														</ul>
 
 
@@ -5379,76 +5656,107 @@
 														</p> -->
 
 														<h5>A)Service Report </h5><br />
-														<p>You can start date and end date of view Service report.</p>
-														<br />
-														<img alt="Service report"
-															src="images/Admin/Report_service.png"><br><br>
-														<ul>
-															<li><strong>Start Date</strong>: Enter a new start date for
-																this service report.</li>
-															<li><strong>End Date</strong>: Enter a new end date for this
-																service report.</li>
-															<li><strong>Select Service</strong>: Select service for this
-																service report.</li>
-														</ul><br />
-														<p>When clicking on GO button. This will open Start Date and End
-															date Between In Service Report and Service list.</p>
+													<p>You can start date and end date of view Service report.</p><br />
+													<img alt="Service report"
+														src="images/Admin/updated_servicereport.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															service report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															service report.</li>
+														<li><strong>Select Service</strong>: Select service for this
+															service report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Service Report and Service list.</p>
+													<p>You can easily download pdf and print these report.</p><br>
 
-														<h5>B)Product Stock </h5><br />
-														<p>You can Manufacturer Name and Product Name of view Product
-															stock report.</p><br />
-														<img alt="Product report"
-															src="images/Admin/Report_product.png"><br><br>
-														<ul>
-															<li><strong>Select Manufacturer Name</strong>: Select
-																manufacturer name for this product stock.</li>
-															<li><strong>Select Product Name</strong>: Select product
-																name for this product stock.</li>
-														</ul><br />
-														<p>When clicking on GO button. This will open In Product stock
-															Report.</p>
+													<h5>B)Product Stock </h5><br />
+													<p>You can Manufacturer Name and Product Name of view Product stock
+														report.</p><br />
+													<img alt="Product report"
+														src="images/Admin/updated_productreport.png"><br><br>
+													<ul>
+														<li><strong>Select Manufacturer Name</strong>: Select
+															manufacturer name for this product stock.</li>
+														<li><strong>Select Product Name</strong>: Select product name
+															for this product stock.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open In Product stock list.
+													</p>
+													<p>You can easily download pdf and print these report.</p><br/>
 
-														<h5>C)Product Usage </h5><br />
-														<p>You can start date and end date of view Product Usage report.
-														</p><br />
-														<img alt="Product report"
-															src="images/Admin/Report_productusage.png"><br><br>
-														<ul>
-															<li><strong>Start Date</strong>: Enter a new start date for
-																this product usage report.</li>
-															<li><strong>End Date</strong>: Enter a new end date for this
-																product usage report.</li>
-															<li><strong>Select Manufacturer Name</strong>: Select select
-																manufacturer name for this product usage.</li>
-															<li><strong>Select Product Name</strong>: Select product
-																name for this product usage.</li>
-														</ul><br />
-														<p>When clicking on GO button. This will open Start Date and End
-															date Between In Product Usage list.</p>
+													<h5>C)Product Usage </h5><br />
+													<p>You can start date and end date of view Product Usage report.</p>
+													<br />
+													<img alt="Product report"
+														src="images/Admin/updated_productusagereport.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															product usage report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															product usage report.</li>
+														<li><strong>Select Manufacturer Name</strong>: Select
+															manufacturer name for this product usage report.</li>
+														<li><strong>Select Product Name</strong>: Select product name
+															for this product usage report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Product Usage list.</p>
+													<p><strong> View Product Usage:</strong> Accountant can view a
+														complete list of all Product Usage and view detail of particular
+														Product Usage by clicking on view detail button. This will open
+														up details.</p><br />
+													<p>You can easily download pdf and print these report.</p><br/>
 
-														<p><strong> View Product Usage:</strong> Accountant can view a
-															complete list of all Product Usage and view detail of
-															particular Product Usage by clicking on view detail button.
-															This will open up details.</p><br />
-														<img alt="invoice view"
-															src="images/Admin/Report_productusage.png"><br><br>
+													<h5>D)Employee Service Report </h5><br />
+													<p>You can start date and end date of view Employee Service report.
+													</p><br />
+													<img alt="Employee report"
+														src="images/Admin/updated_empservicereport.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															employee service report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															employee service report.</li>
+														<li><strong>Select Employee</strong>: Select employee for this
+															employee service report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Employee service Report and employee service
+														list.</p><br/>
 
-														<h5>D)Employee Service Report </h5><br />
-														<p>You can start date and end date of view Employee Service
-															report.</p><br />
-														<img alt="Employee report"
-															src="images/Admin/Report_empservice.png"><br><br>
-														<ul>
-															<li><strong>Start Date</strong>: Enter a new start date for
-																this employee service report.</li>
-															<li><strong>End Date</strong>: Enter a new end date for this
-																employee service report.</li>
-															<li><strong>Select Employee</strong>: Select employee for
-																this employee service report.</li>
-														</ul><br />
-														<p>When clicking on GO button. This will open Start Date and End
-															date Between In Employee service Report and employee service
-															list.</p>
+													<h5>E)Upcoming Service Report </h5><br />
+													<p>You can start date and end date of view Upcoming Service report.
+													</p><br />
+													<img alt="Upcoming Service report"
+														src="images/Admin/upcomingservice_report.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															upcoming service report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															upcoming service report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Upcoming service Report and Upcoming service
+														list.</p>
+													<p>You can easily download pdf and print these report.</p>
+													<br>
+													<h5>F)Email Sent Report </h5><br />
+													<p>You can start date and end date of the view Email Sent report.
+													</p><br />
+													<img alt="Email Sent report"
+														src="images/Admin/emailreport.png"><br><br>
+													<ul>
+														<li><strong>Start Date</strong>: Enter a new start date for this
+															Email Sent report.</li>
+														<li><strong>End Date</strong>: Enter a new end date for this
+															Email sent report.</li>
+													</ul><br />
+													<p>When clicking on GO button. This will open Start Date and End
+														date Between In Email Sent Report and Email sent report
+														list.</p>
+													<p>You can easily download pdf and print these report.</p>
 												</section>
 											</section>
 											<!-- Email Template   -->
@@ -5577,6 +5885,17 @@
 
 														</ul><br />
 												</section>
+												<section id="howto_a">
+													<h4><strong>2.1)How to Videos</strong></h3><br />
+														<h5>How to Videos</h5><br />
+														<p>In this menu it provide video guidance.Click on <strong>Setting</strong> inside Click on
+															<strong>How to Videos</strong> to open this menu.
+														</p><br />
+														<img alt="how to videos"
+															src="images/howtomenu.png">
+														<br>
+														<br>
+												</section>
 											</section>
 											<!--  Inventory  -->
 											<section id="A_Inventory">
@@ -5590,7 +5909,7 @@
 															all Supplier.</p><br />
 
 														<img alt="Supplier"
-															src="images/Accountant/supplier_list.png"><br><br>
+															src="images/Accountant/updated_supplierlist.png"><br><br>
 
 
 														<p><strong>Add Supplier:</strong> Accountant can add supplier
@@ -5659,7 +5978,7 @@
 														manage all types of Product as well as view a complete list of
 														all Product.</p><br />
 													<img alt="Product List"
-														src="images/Accountant/product_list.png"><br><br>
+														src="images/Accountant/updated_productlist.png"><br><br>
 													<p><strong>Add Product:</strong> Accountant can add product details
 													</p><br />
 													<img alt="Product Type"
@@ -5788,7 +6107,7 @@
 														of particular Stock by clicking on view detail button. This will
 														open up details. From here Accountant can also Print Out view
 														Stock.</p><br />
-													<img alt="Stock" src="images/Accountant/Stoke_list.png"><br><br>
+													<img alt="Stock" src="images/Accountant/updated_stocklist.png"><br><br>
 													<p><strong>Add Stock:</strong> You can add Stock details.</p><br />
 													<img alt="Purchase"
 														src="images/Accountant/Purchase_add.png"><br><br>
@@ -5846,7 +6165,7 @@
 															all Customer.</p><br />
 
 														<img alt="Customer"
-															src="images/Accountant/Customer_list.png"><br><br>
+															src="images/Accountant/updatedcustomerlist.png"><br><br>
 
 														<p><strong>Add Customer:</strong> Accountant can add Customer
 															details. </p><br />
@@ -5916,7 +6235,7 @@
 													</p><br />
 
 													<img alt="Employee"
-														src="images/Accountant/Employee_list.png"><br><br>
+														src="images/Accountant/updated_employeelist.png"><br><br>
 
 
 													<p><strong>Add Employee:</strong> Accountant can add Employee
@@ -5990,7 +6309,7 @@
 														of all Support Staff.</p><br />
 
 													<img alt="SupportStaff"
-														src="images/Accountant/SupportStaff_list.png"><br><br>
+														src="images/Accountant/updated_supportstafflist.png"><br><br>
 
 
 													<p><strong>Add SupportStaff:</strong> Accountant can add
@@ -6057,7 +6376,7 @@
 														all accountant.</p><br />
 
 													<img alt="accountant"
-														src="images/Accountant/Accountant_list.png"><br><br>
+														src="images/Accountant/updated_accountantlist.png"><br><br>
 
 
 													<p><strong>Add Accountant:</strong> Accountant can add accountant
@@ -6126,7 +6445,7 @@
 															and manage all Vehicle of Vehicle as well as view a complete
 															list of all Vehicle.</p><br />
 														<img alt="Vehicle List"
-															src="images/Accountant/Vehicle_list.png"><br><br>
+															src="images/Accountant/updated_vehiclelist.png"><br><br>
 														<p><strong>Add Vehicle:</strong> Accountant can add Vehicle
 															details</p><br />
 														<img alt="Vehicle"
@@ -6322,12 +6641,12 @@
 															Service, manage all Service and view a complete list of all
 															Service.</p><br />
 														<img alt="Service List"
-															src="images/Accountant/Service_list.png"><br><br>
+															src="images/Accountant/updated_servicelist.png"><br><br>
 														<p><strong>Add Service:</strong> Accountant can add Service
 															details</p><br />
 														<!-- <img alt="Service" src="images/Accountant/Service_add.png"><br><br> -->
 														<img alt="Service"
-															src="images/Accountant/Add_service_with_MOT_by_Accountant.png"><br><br>
+															src="images/Accountant/updated_addservice.png"><br><br>
 														<ul>
 															<h6>Step-1: Add Service Details.</h6>
 															<li><strong>Jobcard Number</strong>: Job card number auto
@@ -6355,6 +6674,8 @@
 																service.</li>
 															<li><strong>Registration number</strong>: Enter a new
 																registration number for this service.</li>
+															<li><strong>Car Damage Marker</strong>: Add Car damage marker in given image.</li>
+															<li><strong>Add Pre-Inspection Checklist</strong>: Add Pre-Inspection checklist point based on car damage marker </li>
 
 															<li><strong>MOT Test</strong>: Tick this check box for
 																vehicle MOT testing.</li>
@@ -6362,7 +6683,7 @@
 															<h6>Step-2: Add Job card Details.</h6><br>
 															<!-- <img alt="Service" src="images/Accountant/Service_add2.png"><br><br> -->
 															<img alt="Service"
-																src="images/Accountant/add_service_second_step_with_MOT_by_Accountant.png"><br><br>
+																src="images/Accountant/updatedjobcarddetail.png"><br><br>
 															<li><strong>Job card Number</strong>: Job card number auto
 																fields.</li>
 															<li><strong>In Date/Time</strong>: In date/time auto fields.
@@ -6388,10 +6709,9 @@
 																fields.</li>
 															<li><strong>Color</strong>: Color auto fields.</li>
 															<h6>Observation List</h6>
-															<li><strong>Add New</strong>: Add new observation point for
-																this service.</li>
-															<li><strong>Observation Point</strong>: List of the
-																observation point.</li>
+															<li><strong>Add New</strong>:Select and Add new observation point for
+																this service in given dropdown.</li>
+															<li><strong>Observation Point</strong>: Selected observation points list.</li>
 
 															<h6>MOT Test</h6>
 															<li><strong>MOT Test View</strong>: Show details for MOT
@@ -6408,7 +6728,7 @@
 															Service Details.</p><br />
 														<!-- <img alt="Service" src="images/Accountant/Service_edit.png"><br><br> -->
 														<img alt="Service"
-															src="images/Accountant/edit_service_with_MOT_by_Accountant.png"><br><br>
+															src="images/SupportStaff/editservice.png"><br><br>
 														<p><strong> View Service:</strong> Accountant can view a
 															complete list of all Service and view detail of particular
 															Service by clicking on view detail button. This will open up
@@ -6433,7 +6753,7 @@
 														invoice all invoice and view a complete list of all invoice.</p>
 													<br />
 													<img alt="invoice List"
-														src="images/Accountant/invoice_list.png"><br><br>
+														src="images/Accountant/updated_invoicelist.png"><br><br>
 													<p><strong>Add Invoice:</strong> Accountant can add invoice details
 													</p><br />
 													<img alt="invoice add"
@@ -6532,11 +6852,11 @@
 															card, manage all job card and view a complete list of all
 															job card</p><br />
 														<img alt="job card List"
-															src="images/Accountant/jobcard_list.png"><br><br>
+															src="images/Accountant/updated_jobcardlist.png"><br><br>
 														<p><strong>Add job card:</strong> Accountant can add job card
 															details</p><br />
 														<img alt="job card add"
-															src="images/Accountant/Service_add.png"><br><br>
+															src="images/Accountant/updated_addservice.png"><br><br>
 														<h6>Step-1: Add Service Details.</h6>
 														<ul>
 															<li><strong>Jobcard Number</strong>: Job card number auto
@@ -6564,10 +6884,12 @@
 																service charge for this service.</li>
 															<li><strong>Registration number</strong>: Enter a new
 																registration number for this service.</li>
+															<li><strong>Car Damage Marker</strong>: Add Car damage marker on given image.</li>
+															<li><strong>Add Pre-Inspection Checklist</strong>: Add Pre-Inspection checklist points based on car damage marker.</li>
 
 															<h6>Step-2: Add Job card Details.</h6><br>
 															<img alt="Service"
-																src="images/Accountant/Service_add2.png"><br><br>
+																src="images/Accountant/updatedjobcarddetail.png"><br><br>
 															<li><strong>Job card Number</strong>: Job card number auto
 																fields.</li>
 															<li><strong>In Date/Time</strong>: In date/time auto fields.
@@ -6593,9 +6915,9 @@
 																fields.</li>
 															<li><strong>Color</strong>: Color auto fields.</li>
 															<h6>Observation List</h6>
-															<li><strong>Add New</strong>: Add New observation point for
-																this service.</li>
-															<li><strong>Observation Point</strong>: List of the
+															<li><strong>Add New</strong>: Select and Add New observation point for
+																this service in given dropdown.</li>
+															<li><strong>Observation Point</strong>: List of the Selected
 																observation point.</li>
 														</ul>
 
@@ -7150,75 +7472,108 @@
 													<p>When clicking on GO button. This will open Start Date and End
 														date Between In vehicle sales Report and vehicle sales list.</p> -->
 
-													<h5>A)Service Report </h5><br />
-													<p>You can start date and end date of view Service report.</p><br />
-													<img alt="Service report"
-														src="images/Admin/Report_service.png"><br><br>
-													<ul>
-														<li><strong>Start Date</strong>: Enter a new start date for this
-															service report.</li>
-														<li><strong>End Date</strong>: Enter a new end date for this
-															service report.</li>
-														<li><strong>Select Service</strong>: Select service for this
-															service report.</li>
-													</ul><br />
-													<p>When clicking on GO button. This will open Start Date and End
-														date Between In Service Report and Service list.</p>
-
-													<h5>B)Product Stock </h5><br />
-													<p>You can Manufacturer Name and Product Name of view Product stock
-														report.</p><br />
-													<img alt="Product report"
-														src="images/Admin/Report_product.png"><br><br>
-													<ul>
-														<li><strong>Select Manufacturer Name</strong>: Select
-															manufacturer name for this product stock.</li>
-														<li><strong>Select Product Name</strong>: Select product name
-															for this product stock.</li>
-													</ul><br />
-													<p>When clicking on GO button. This will open In Product stock list.
-													</p>
-
-													<h5>C)Product Usage </h5><br />
-													<p>You can start date and end date of view Product Usage report.</p>
-													<br />
-													<img alt="Product report"
-														src="images/Admin/Report_productusage.png"><br><br>
-													<ul>
-														<li><strong>Start Date</strong>: Enter a new start date for this
-															product usage report.</li>
-														<li><strong>End Date</strong>: Enter a new end date for this
-															product usage report.</li>
-														<li><strong>Select Manufacturer Name</strong>: Select
-															manufacturer name for this product usage report.</li>
-														<li><strong>Select Product Name</strong>: Select product name
-															for this product usage report.</li>
-													</ul><br />
-													<p>When clicking on GO button. This will open Start Date and End
-														date Between In Product Usage list.</p>
-
-													<p><strong> View Product Usage:</strong> Accountant can view a
-														complete list of all Product Usage and view detail of particular
-														Product Usage by clicking on view detail button. This will open
-														up details.</p><br />
-													<img alt="invoice view"
-														src="images/Admin/Report_productusage.png"><br><br>
-													<h5>D)Employee Service Report </h5><br />
-													<p>You can start date and end date of view Employee Service report.
-													</p><br />
-													<img alt="Employee report"
-														src="images/Admin/Report_empservice.png"><br><br>
-													<ul>
-														<li><strong>Start Date</strong>: Enter a new start date for this
-															employee service report.</li>
-														<li><strong>End Date</strong>: Enter a new end date for this
-															employee service report.</li>
-														<li><strong>Select Employee</strong>: Select employee for this
-															employee service report.</li>
-													</ul><br />
-													<p>When clicking on GO button. This will open Start Date and End
-														date Between In Employee service Report and employee service
-														list.</p>
+														<h5>A)Service Report </h5><br />
+														<p>You can start date and end date of view Service report.</p><br />
+														<img alt="Service report"
+															src="images/Admin/updated_servicereport.png"><br><br>
+														<ul>
+															<li><strong>Start Date</strong>: Enter a new start date for this
+																service report.</li>
+															<li><strong>End Date</strong>: Enter a new end date for this
+																service report.</li>
+															<li><strong>Select Service</strong>: Select service for this
+																service report.</li>
+														</ul><br />
+														<p>When clicking on GO button. This will open Start Date and End
+															date Between In Service Report and Service list.</p>
+														<p>You can easily download pdf and print these report.</p><br>
+	
+														<h5>B)Product Stock </h5><br />
+														<p>You can Manufacturer Name and Product Name of view Product stock
+															report.</p><br />
+														<img alt="Product report"
+															src="images/Admin/updated_productreport.png"><br><br>
+														<ul>
+															<li><strong>Select Manufacturer Name</strong>: Select
+																manufacturer name for this product stock.</li>
+															<li><strong>Select Product Name</strong>: Select product name
+																for this product stock.</li>
+														</ul><br />
+														<p>When clicking on GO button. This will open In Product stock list.
+														</p>
+														<p>You can easily download pdf and print these report.</p><br/>
+	
+														<h5>C)Product Usage </h5><br />
+														<p>You can start date and end date of view Product Usage report.</p>
+														<br />
+														<img alt="Product report"
+															src="images/Admin/updated_productusagereport.png"><br><br>
+														<ul>
+															<li><strong>Start Date</strong>: Enter a new start date for this
+																product usage report.</li>
+															<li><strong>End Date</strong>: Enter a new end date for this
+																product usage report.</li>
+															<li><strong>Select Manufacturer Name</strong>: Select
+																manufacturer name for this product usage report.</li>
+															<li><strong>Select Product Name</strong>: Select product name
+																for this product usage report.</li>
+														</ul><br />
+														<p>When clicking on GO button. This will open Start Date and End
+															date Between In Product Usage list.</p>
+														<p><strong> View Product Usage:</strong> Accountant can view a
+															complete list of all Product Usage and view detail of particular
+															Product Usage by clicking on view detail button. This will open
+															up details.</p><br />
+														<p>You can easily download pdf and print these report.</p><br/>
+	
+														<h5>D)Employee Service Report </h5><br />
+														<p>You can start date and end date of view Employee Service report.
+														</p><br />
+														<img alt="Employee report"
+															src="images/Admin/updated_empservicereport.png"><br><br>
+														<ul>
+															<li><strong>Start Date</strong>: Enter a new start date for this
+																employee service report.</li>
+															<li><strong>End Date</strong>: Enter a new end date for this
+																employee service report.</li>
+															<li><strong>Select Employee</strong>: Select employee for this
+																employee service report.</li>
+														</ul><br />
+														<p>When clicking on GO button. This will open Start Date and End
+															date Between In Employee service Report and employee service
+															list.</p><br/>
+	
+														<h5>E)Upcoming Service Report </h5><br />
+														<p>You can start date and end date of view Upcoming Service report.
+														</p><br />
+														<img alt="Upcoming Service report"
+															src="images/Admin/upcomingservice_report.png"><br><br>
+														<ul>
+															<li><strong>Start Date</strong>: Enter a new start date for this
+																upcoming service report.</li>
+															<li><strong>End Date</strong>: Enter a new end date for this
+																upcoming service report.</li>
+														</ul><br />
+														<p>When clicking on GO button. This will open Start Date and End
+															date Between In Upcoming service Report and Upcoming service
+															list.</p>
+														<p>You can easily download pdf and print these report.</p>
+														<br>
+														<h5>F)Email Sent Report </h5><br />
+														<p>You can start date and end date of the view Email Sent report.
+														</p><br />
+														<img alt="Email Sent report"
+															src="images/Admin/emailreport.png"><br><br>
+														<ul>
+															<li><strong>Start Date</strong>: Enter a new start date for this
+																Email Sent report.</li>
+															<li><strong>End Date</strong>: Enter a new end date for this
+																Email sent report.</li>
+														</ul><br />
+														<p>When clicking on GO button. This will open Start Date and End
+															date Between In Email Sent Report and Email sent report
+															list.</p>
+														<p>You can easily download pdf and print these report.
 
 											</section>
 											<!-- Email Template   -->
@@ -7319,9 +7674,9 @@
 													using FTP.
 												</p>
 												<img alt="Patch" src="images/patch1.png"><br><br>
-												<p>Update the new code by replacing the old `.env` file with your
+												<p>Update the new code by replacing the old `.env` and installed.txt file with your
 													specific configurations.</p>
-												<img alt="Patch" src="images/patch2.png"><br><br>
+												<img alt="Patch" src="images/patch2_new.png"><br><br>
 
 												<h4><strong>3) Log in to Your System:</strong></h4>
 												<p>Access the system using administrative credentials.</p>
