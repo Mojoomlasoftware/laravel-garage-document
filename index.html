@@ -61,7 +61,7 @@
 				<div id="header-sm">
 					<div class="col-md-8 col-md-offset-1 desc">
 						<h4 class="slight">Garage Management System</h4>
-						<h5 class="slight"><small> Documented by Youjoomla - </small></h5>
+						<h5 class="slight"><small> Documented by Mojoomla - </small></h5>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
@@ -97,7 +97,7 @@
 											<li><a href="#BusinessHours">Business Hours</a></li>
 											<li><a href="#Branch_setting">Branch Setting</a></li>
 											<li><a href="#Email_setting">Email Setting</a></li>
-											<li><a href="#license">License Setting</a></li>
+											<!-- <li><a href="#license">License Setting</a></li> -->
 											<li><a href="#Quotation_setting">Quotation Setting</a></li>
 											<li><a href="#csv_setting">CSV Import</a></li>
 										</ul>
@@ -502,7 +502,7 @@
 													<br><img src="images/Laragon/Screenshot_4.jpg"
 														style="width:80%;" /><br><br><br>
 													<li>After Clicking on Cancel or Close Button if you See a Below
-													 Types Of Pop-up Box, Click on ok or Close Button </li>
+													 Types Of Pop-up Box, Click on Cancel or Close Button </li>
 													
 													<br><img src="images/Laragon/step11.png"
 														style="width:80%;" /><br><br><br>
@@ -1141,10 +1141,39 @@
 															<li><strong>Encryption:</strong> Choose the encryption
 																method:
 																ssl for SSL/TLS, or null for no encryption.</li>
-														</ul><br /><br />
+														</ul>
+														<p>If you are using the Garage System on your local server (XAMPP or Laragon) and have configured email settings with invalid credentials for sending real emails, please follow one of the two recommended methods below to properly set up your email configuration.</p>
+														<p>Option 1: Gmail SMTP Setup</p>
+														<ol>
+															<li>Go to: https://myaccount.google.com/security</li>
+															<li>Enable 2-Step Verification on your Gmail account.</li>
+															<li>After that, visit: https://myaccount.google.com/apppasswords</li>
+															<li>Select App: Mail, Device: Other, then generate a password.Enter this app password in the Garage system email settings.</li>
+														</ol><br />
+														<p>Option 2: Brevo (Sendinblue) SMTP Setup</p>
+														
+														<b> Step 1: Get Brevo SMTP credentials</b><br>
+															<ol>
+																<li>Log in at: https://app.brevo.com</li>
+																<li>Navigate to SMTP & API → SMTP Settings</li>
+																<li>Copy your SMTP Username and SMTP Password</li>
+																
+															</ol><br>
+															<b>Step 2: Enter the following details in Garage email settings:</b><br>
+															<ol>
+																<li>Email Driver: smtp</li>
+																<li>SMTP Server(host): smtp-relay.brevo.com</li>
+																<li>SMTP Port: 587</li>
+																<li>Email Address: your Brevo email</li>
+																<li>Password: your Brevo SMTP password</li>
+																<li>Encryption: tls</li>
+																<li>From Email: your Brevo verified sender email(https://app.brevo.com/senders/list)</li>
+															</ol>
+														
+														<br /><br />
 													</section>
 													<!-- license reset setting -->
-													<section id="license">
+													<!-- <section id="license">
 														<h5>H) License Reset Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>License
 																Setting
@@ -1164,10 +1193,10 @@
 														<br>
 														<br>
 														
-													</section>
+													</section> -->
 													<!-- Quotation Setting  -->
 													<section id="Quotation_setting">
-														<h5>I) Quotation Settings</h5><br />
+														<h5>H) Quotation Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>Quotation
 																Setting
 															</strong> to start setting up the system. To configure your
@@ -1184,7 +1213,7 @@
 													</section>
 													<!-- CSV Import Setting  -->
 													<section id="csv_setting">
-														<h5>J) CSV Import</h5><br />
+														<h5>I) CSV Import</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong> CSV Import
 															</strong> to start importing csv data you can follow these
 															steps.
