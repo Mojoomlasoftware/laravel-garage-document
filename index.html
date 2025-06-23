@@ -97,7 +97,7 @@
 											<li><a href="#BusinessHours">Business Hours</a></li>
 											<li><a href="#Branch_setting">Branch Setting</a></li>
 											<li><a href="#Email_setting">Email Setting</a></li>
-											<!-- <li><a href="#license">License Setting</a></li> -->
+											<li><a href="#license">License Setting</a></li>
 											<li><a href="#Quotation_setting">Quotation Setting</a></li>
 											<li><a href="#csv_setting">CSV Import</a></li>
 										</ul>
@@ -502,7 +502,7 @@
 													<br><img src="images/Laragon/Screenshot_4.jpg"
 														style="width:80%;" /><br><br><br>
 													<li>After Clicking on Cancel or Close Button if you See a Below
-													 Types Of Pop-up Box, Click on Cancel or Close Button </li>
+													 Types Of Pop-up Box, Click on ok button. </li>
 													
 													<br><img src="images/Laragon/step11.png"
 														style="width:80%;" /><br><br><br>
@@ -620,6 +620,7 @@
 												</section>
 												<section id="CronJobs">
 													<h3><strong>C) CronJobs</strong></h3><br>
+													<p>Create this cronjob in your cPanel to activate reminder notification.</p>
 													<p>You need to set below command as cronjob
 													</p>
 													<p><strong>php artisan schedule:run (runs from the root folder of
@@ -629,6 +630,8 @@
 													<p>Example of cronjob command set in cPanel:</p>
 													<p><strong>* * * * * php /path/to/garage/artisan schedule:run >>
 															/dev/null 2>&1</strong>
+													</p><br>
+													<p><strong>* * * * * /usr/local/bin/php /home/public_html/garage.com/artisan schedule:run >> /dev/null 2>&1</strong>
 													</p>
 													<hr>
 												</section>
@@ -661,6 +664,11 @@
 															Appointment. Also when selecting any date then it will
 															display by default the selected date </p>
 														<img alt="" src="images/service-frontendBook.png"><br><br>
+
+														<p>After setting up email configuration it will send an email to the customer.if you have set CronJobs then it will send an reminder email to the customer.</p>
+														<p>Here are template for reminder mail to customer</p>
+														<img alt="Reminder" src="images/remindermail.png"><br><br>
+														<br>
 														<hr>
 													</section>
 												</section>
@@ -1142,15 +1150,9 @@
 																method:
 																ssl for SSL/TLS, or null for no encryption.</li>
 														</ul>
-														<p>If you are using the Garage System on your local server (XAMPP or Laragon) and have configured email settings with invalid credentials for sending real emails, please follow one of the two recommended methods below to properly set up your email configuration.</p>
-														<p>Option 1: Gmail SMTP Setup</p>
-														<ol>
-															<li>Go to: https://myaccount.google.com/security</li>
-															<li>Enable 2-Step Verification on your Gmail account.</li>
-															<li>After that, visit: https://myaccount.google.com/apppasswords</li>
-															<li>Select App: Mail, Device: Other, then generate a password.Enter this app password in the Garage system email settings.</li>
-														</ol><br />
-														<p>Option 2: Brevo (Sendinblue) SMTP Setup</p>
+														<p>If you are using the Garage System on your local server (XAMPP or Laragon) and have configured email settings with invalid credentials for sending real emails, please follow this below method to properly set up your email configuration.</p>
+														
+														<p>Brevo (Sendinblue) SMTP Setup</p>
 														
 														<b> Step 1: Get Brevo SMTP credentials</b><br>
 															<ol>
@@ -1173,7 +1175,7 @@
 														<br /><br />
 													</section>
 													<!-- license reset setting -->
-													<!-- <section id="license">
+													<section id="license">
 														<h5>H) License Reset Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>License
 																Setting
@@ -1193,10 +1195,10 @@
 														<br>
 														<br>
 														
-													</section> -->
+													</section>
 													<!-- Quotation Setting  -->
 													<section id="Quotation_setting">
-														<h5>H) Quotation Settings</h5><br />
+														<h5>I) Quotation Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>Quotation
 																Setting
 															</strong> to start setting up the system. To configure your
@@ -1213,7 +1215,7 @@
 													</section>
 													<!-- CSV Import Setting  -->
 													<section id="csv_setting">
-														<h5>I) CSV Import</h5><br />
+														<h5>J) CSV Import</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong> CSV Import
 															</strong> to start importing csv data you can follow these
 															steps.
