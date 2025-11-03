@@ -381,7 +381,7 @@
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 desc">
 							<h4 class="slight">Garage Management System </h4>
-							<h5 class="slight"><small> Documented by Mojoomla</a> - at 06-01-2024</small></h5>
+							<h5 class="slight"><small> Documented by Mojoomla</a> - at 01-11-2025</small></h5>
 						</div>
 					</div>
 
@@ -458,7 +458,7 @@
 
 										<li>Please Refer Below Installation Guide Video For Garage Master Installation in cpanel</li><br>
 										<iframe width="560" height="315"
-											src="https://www.youtube.com/embed/4j55oWnE5Jc?si=R79ZcY1Nt0OnvlPV"
+											src="https://www.youtube.com/watch?v=4j55oWnE5Jc&list=PLn8hzwYWx-JlBcDzj0m2ho065CQSPBhun&index=14"
 											title="YouTube video player" frameborder="0"
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 											referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -536,7 +536,16 @@
 												<section>
 													<h3><strong>B) Installation:</strong></h3><br>
 
-													<h4>1)Purchase Information</h4><br />
+													<h4>1)Requirements</h4><br />
+													<img src="images/Installer/Installer2.png" /><br><br>
+
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is
+													fail
+													then you are not able to install this package. check all
+													requirements
+													and click on Next Step.<br><br>
+
+													<h4>2)Purchase Information</h4><br />
 													<img src="images/Installer/Installer1.png" /><br><br>
 
 													<ol>
@@ -547,15 +556,6 @@
 														<li><strong>E-mail : </strong>Enter your purchasekey time email.
 														</li>
 													</ol>
-
-													<h4>2)Requirements</h4><br />
-													<img src="images/Installer/Installer2.png" /><br><br>
-
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Note : </b>If any result is
-													fail
-													then you are not able to install this package. check all
-													requirements
-													and click on Next Step.<br><br>
 
 													<h4>3)Database setup</h4><br />
 													<img src="images/Installer/Installer3.png" /><br><br>
@@ -930,9 +930,30 @@
 														</ul><br /><br />
 													</section>
 
+													<!--Stripe settings-->
+													<section id="Stripe">
+														<h5>F) Stripe Settings</h5><br />
+														Click on Setting within Stripe Setting to configure your payment gateway. To enable online payments, please enter your Stripe API keys below. These keys connect your system to Stripe for secure payment processing.
+
+														Stripe API Key Information: Update your Live Stripe Keys here!
+														</p><br />
+														<img alt="Business Hours Settings"
+															src="images/stripesetting.png">
+														<br>
+														<br>
+														<ul>
+															<li><b>Stripe Publishable Key</b></li>
+															<p>(Example: pk_test_gMHgW5FAxW4GUHu1I4gfZzxj)</p>
+															<li><b>Stripe Secret Key</b></li>
+															<p>(Example: sk_test_***********)</p>
+															<br>
+															<p>After entering your Stripe keys, payments will be securely processed through Stripe. Make sure to use your live keys when running in production and test keys during testing.</p>
+														</ul><br /><br />
+													</section>
+
 													<!--  Branch Settings  -->
 													<section id="Branch_setting">
-														<h5>F) Branch Settings</h5><br />
+														<h5>G) Branch Settings</h5><br />
 														<p>Click on <strong>Setting</strong> inside Click on
 															<strong>Branch
 																Setting</strong> tab to start setting up the system. You
@@ -1115,9 +1136,9 @@
 
 													</section>
 
-													<!--  BusinessHours Settings  -->
+													<!--  Email Settings  -->
 													<section id="Email_setting">
-														<h5>G) Email Settings</h5><br />
+														<h5>H) Email Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>Email
 																Setting
 															</strong> to start setting up the system. To configure your
@@ -1176,9 +1197,9 @@
 													</section>
 													<!-- license reset setting -->
 													<section id="license">
-														<h5>H) License Reset Settings</h5><br />
+														<h5>I) License Reset Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>License
-																Setting
+																
 															</strong> to start setting up the system.If you want to transfer your license to a new domain, please reset this license. This action will deactivate your current license on this domain and allow you to register a new domain.
 															
 														</p>
@@ -1198,7 +1219,7 @@
 													</section>
 													<!-- Quotation Setting  -->
 													<section id="Quotation_setting">
-														<h5>I) Quotation Settings</h5><br />
+														<h5>J) Quotation Settings</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong>Quotation
 																Setting
 															</strong> to start setting up the system. To configure your
@@ -1215,7 +1236,7 @@
 													</section>
 													<!-- CSV Import Setting  -->
 													<section id="csv_setting">
-														<h5>J) CSV Import</h5><br />
+														<h5>K) CSV Import</h5><br />
 														<p>Click on <strong>Setting</strong> within <strong> CSV Import
 															</strong> to start importing csv data you can follow these
 															steps.
