@@ -459,7 +459,7 @@
 
 										<li>Please Refer Below Installation Guide Video For Garage Master Installation in cpanel</li><br>
 										<iframe width="560" height="315"
-											src="https://www.youtube.com/watch?v=4j55oWnE5Jc&list=PLn8hzwYWx-JlBcDzj0m2ho065CQSPBhun&index=14"
+											src="https://www.youtube.com/watch?v=4j55oWnE5Jc&list=PLn8hzwYWx-JlBcDzj0m2ho065CQSPBhun&index=15"
 											title="YouTube video player" frameborder="0"
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 											referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -932,25 +932,76 @@
 													</section>
 
 													<!--Stripe settings-->
-													<section id="Stripe">
-														<h5>F) Stripe Settings</h5><br />
-														Click on Setting within Stripe Setting to configure your payment gateway. To enable online payments, please enter your Stripe API keys below. These keys connect your system to Stripe for secure payment processing.
-
-														Stripe API Key Information: Update your Live Stripe Keys here!
-														</p><br />
-														<img alt="Business Hours Settings"
-															src="images/stripesetting.png">
+													
+<section id="Stripe">
+    <h5>F) Stripe Settings</h5><br />
+    
+    <p>Click on Settings within Stripe Settings to configure your payment gateway. The Garage Master system supports two methods for Stripe integration depending on your country.</p>
+    
+    <h6>Stripe Connection Status</h6>
+    <p>To accept online payments, you must connect your Stripe account to the system. The connection method varies based on your selected country.</p>
+    <br />
+    
+    <h6>Step 1: Select Your Stripe Account Country</h6>
+    <p>First, select your Stripe account country from the dropdown menu. The system will automatically determine the best integration method for your country.</p>
+    <br>
+    
+    <h6>Step 2: Choose Your Integration Method</h6>
+    <p>Based on your selected country, one of the following options will appear:</p>
+    
+    <h6>Option A: Stripe Connect (Recommended for Supported Countries)</h6>
+    <p>If your country supports Stripe Connect (e.g., United States, United Kingdom, Canada, Australia, and other supported regions), you'll see the <b>"Connect Your Stripe Account"</b> button.</p>
+													<img alt="Stripe Connect - United States" src="images/stripe-setting-us.png">
+													<br><br>
+													
+													<p>Click the button to securely connect your Stripe account. If you don't have a Stripe account yet, click on <b>"Please create stripe account"</b> to set up a new account first.</p>
+													<br>
+													
+													<p>Once connected successfully, you'll see a confirmation message indicating your Stripe account is active and ready to receive payments:</p>
+													<img alt="Stripe Account Connected Successfully" src="images/stripe-setting-success.png">
+													<br><br>
+													
+													<p><b>Note:</b> You can disconnect your Stripe account at any time by clicking the <b>"Disconnect"</b> button.</p>
+													<br><br>
+													
+													<h6>Option B: Manual API Key Integration (For Non-Stripe Connect Countries)</h6>
+													<p>If your country doesn't support Stripe Connect (e.g., India and other regions), you'll see a form to manually enter your Stripe API keys:</p>
+													<img alt="Stripe API Key Form - India" src="images/stripe-setting-notsupport.png">
+													<br><br>
+													
+													<p>To enable online payments with manual integration, enter your Stripe API keys below:</p>
+													<br>
+													
+													<ul>
+														<li><b>Stripe Publishable Key</b></li>
+														<p>This is your public key used for client-side operations.</p>
+														<p>(Example: pk_test_gMHgW5FAxW4GUHu1I4gfZzxj or pk_live_...)</p>
 														<br>
+														
+														<li><b>Stripe Secret Key</b></li>
+														<p>This is your private key used for server-side operations. Keep this confidential.</p>
+														<p>(Example: sk_test_*********** or sk_live_***********)</p>
 														<br>
-														<ul>
-															<li><b>Stripe Publishable Key</b></li>
-															<p>(Example: pk_test_gMHgW5FAxW4GUHu1I4gfZzxj)</p>
-															<li><b>Stripe Secret Key</b></li>
-															<p>(Example: sk_test_***********)</p>
-															<br>
-															<p>After entering your Stripe keys, payments will be securely processed through Stripe. Make sure to use your live keys when running in production and test keys during testing.</p>
-														</ul><br /><br />
-													</section>
+													</ul>
+													
+													<h6>How to Get Your Stripe API Keys:</h6>
+													<ol>
+														<li>Log in to your Stripe Dashboard at <a href="https://dashboard.stripe.com" target="_blank">https://dashboard.stripe.com</a></li>
+														<li>Navigate to <b>Developers → API keys</b></li>
+														<li>Copy your Publishable key and Secret key</li>
+														<li>Paste them into the respective fields above</li>
+														<li>Click <b>"UPDATE"</b> to save your keys</li>
+													</ol>
+													<br>
+													
+													<p><b>Important:</b> Use test keys (starting with pk_test_ and sk_test_) during testing, and switch to live keys (starting with pk_live_ and sk_live_) when running in production.</p>
+													<br><br>
+													
+													
+													
+													<p>After successfully connecting via either method, your system will be ready to securely process online payments through Stripe.</p>
+													<br><br>
+												</section>
 
 													<!--  Branch Settings  -->
 													<section id="Branch_setting">
