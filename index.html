@@ -430,7 +430,7 @@
 											<li>XML PHP Extension</li>
 								<br /><br />
 
-								<h5>2). FTP Upload / File Manager Upload</h5>
+								<h5>2).File Manager Upload</h5>
 									<ol>
 										<li>Login to your cPanel.
 										</li>
@@ -440,6 +440,30 @@
 										<li>After the upload is complete, extract the zip file.</li>
 										<li>Pointout Garage root folder in your domain (Ex. public_html/garage)</li>
 										<li>You will now have a folder named Garage inside public_html: public_html/garage</li></ol><br>
+								    <p>Please review the screenshots below for proper setup guidance:</p>
+									<p>
+									Extract the provided <strong>garage.zip</strong> file into your domain directory and ensure that the
+									<strong>root folder</strong> is correctly selected in the domain list.
+									</p>
+									<img src="images/Installer/cpanel-domain.png" alt="Domain Directory Setup"><br>
+									<br><br>
+									<p>
+									Confirm that the document root is pointing to the correct project directory.
+									</p>
+									<img src="images/Installer/cpanel-root.png" alt="Root Folder Configuration"><br>
+									<br><br>
+									<p>
+									After the files are set up correctly, create a new <strong>database</strong> and <strong>database user</strong>,
+									then assign the user to the database with all required privileges.
+									</p>
+									<img src="images/Installer/cpanel-database.png" alt="Database Setup"><br>
+									<br><br>
+									<p>
+									Once the installation is completed successfully, add your server email account details
+									in the Garage Master application’s <strong>Email Settings</strong> to ensure email features work properly.
+									</p>
+									<img src="images/Installer/cpanel-email.png" alt="Create Email Account"><br>
+
                                 <h5>3). Create a MySQL Database and User</h5>
 									<ol>
 										<li>In cPanel, scroll down to the Databases section.</li>
@@ -450,10 +474,10 @@
 										<li>Step 4 :Check the box: All Privileges and Click Next Step. </li>
 										<li>Click Create User.</li>
 									</ol><br>
-		
+								<p>Note: if you are getting any issue please check:<a href="#FAQ">FAQ</a></p>
 								<h5>4). Run the Installation Wizard</h5>
 									<ol>
-										<li>Open your browser and go to your domain:https://yourdomain.com/garage</li>
+										<li>Open your browser and go to your domain:https://yourdomain.com</li>
 										<li>The Garage System Installation Wizard will appear.</li>
 									</ol>
 
@@ -9649,6 +9673,30 @@
 															target="_blank">Click
 															here </a>or contact your host.</p>
 													<hr>
+													<h4><strong>8) I am facing a CSS loading issue on the installer page</strong></h4>
+														<br>
+
+														<img src="images/Installer/css-notload.png" alt="CSS loading issue">
+
+														<p>If you encounter a CSS loading issue like the one shown above, please check the following solutions:</p>
+
+														<ol>
+														<li>
+															<strong>Incorrect document root configuration:</strong><br>
+															Make sure your domain is pointing to the project <strong>root directory</strong> and <strong>not</strong> directly to the <code>garage/public</code> folder.  
+															If the public folder is set as the document root, this issue may occur during installation.
+														</li>
+
+														<li>
+															<strong>Missing CSS or build files:</strong><br>
+															Ensure that all Garage Master files have been uploaded correctly to your server.  
+															Verify that the <code>build</code> and <code>public</code> asset files exist and were not skipped during upload.
+														</li>
+														</ol>
+
+														<hr>
+
+
 
 												</section>
 												<!-- start-footer-->
