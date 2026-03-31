@@ -662,7 +662,7 @@ body{font-family:var(--font-body) ;font-size:16px;line-height:1.7;color:var(--in
 .gm-content h3{font-size:1.3rem;font-weight:700;color:var(--ink) ;margin:20px 0 8px}
 .gm-content h4{
   font-family:var(--font-display) ;
-  font-size:0.97rem;
+  font-size:1.3rem;
   font-weight:700;
   color:var(--ink) ;
   margin:7px 0 8px;
@@ -683,7 +683,7 @@ body{font-family:var(--font-body) ;font-size:16px;line-height:1.7;color:var(--in
 }
 .gm-content h5{
   font-family:var(--font-display) ;
-  font-size:1rem;
+  font-size:1.1rem;
   font-weight:700;
   color:var(--brand) ;
   text-transform:uppercase;
@@ -732,6 +732,7 @@ section img:not(.hero-img) {max-width:100%;height:auto}
 .footer-links a{color:rgba(255,255,255,.7) ;font-size:.95rem;text-decoration:none;transition:all .15s var(--ease) ;border:none}
 .footer-links a:hover{color:var(--brand) }
 .copyright{color:rgba(255, 255, 255, 0.73)  !important;font-size:1rem !important}
+.copyright a:hover{color:#ff7519e6  !important}
 
 /* Back to top */
 .back-to-top{
