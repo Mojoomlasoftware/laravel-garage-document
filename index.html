@@ -370,7 +370,18 @@
 					alt="Cpanel"
 					onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'bi bi-image\'></i><span>cpanel Screenshot</span></div>'"
 				>
-				</div>  
+				</div> <br>
+				<p>Navigate to <code>resources/views/errors/503.blade.php</code> and open the <code>503.blade.php</code> file as shown in the image below.</p>
+				<p>Remove the following code from the file:</p>
+				<code>{{ $cspNonce }}</code>
+				<p>After Removing the code, save the file.</p>
+				<div class="step-image">
+				<img 
+					src="images/Installer/503-blade.png" 
+					alt="503.blade.php Screenshot"
+					onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'bi bi-image\'></i><span>503.blade.php Screenshot</span></div>'"
+				>
+				</div>
 			</div>
             </div>
             <div class="step-item" data-aos="fade-right" data-aos-delay="150">
